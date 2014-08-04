@@ -130,6 +130,7 @@ playerUpdateVelocity(cpBody *body, cpVect gravity, cpFloat damping, cpFloat dt)
         
         [self runAction:teleportFadeIn];
         _teleportCD = YES;
+        _didCollide = NO;
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             _teleportCD = NO;

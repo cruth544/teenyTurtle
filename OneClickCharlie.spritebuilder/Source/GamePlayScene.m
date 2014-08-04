@@ -24,6 +24,9 @@ static BOOL hasGameBeenPlayed;
     Shark *_sharkNode;
     Starfish *_starfishNode;
     
+    CCNode *_turtleReferencePosition;
+    CCSprite *_sharkReferenceSprite;
+    
     int _scoreNumber;
     CCLabelTTF *_score;
     
@@ -80,6 +83,7 @@ static BOOL hasGameBeenPlayed;
         self.paused = NO;
         _characterNode.paused = NO;
         _sharkNode.paused = NO;
+        [self showDistanceSprites];
     }
     
     for (int i = 0; i < 5; i++) {
@@ -217,16 +221,28 @@ static BOOL hasGameBeenPlayed;
     return YES;
 }
 
-
 #pragma mark - Custom Methods
 
 - (void) startGame
 {
     [_mainMenu removeFromParent];
+    
+    [self unpauseEverything];
+    [self showDistanceSprites];
+}
+
+- (void) unpauseEverything
+{
     self.paused = NO;
     _characterNode.paused = NO;
     _sharkNode.paused = NO;
+}
+
+- (void) showDistanceSprites
+{
     _score.visible = YES;
+    _turtleReferencePosition.visible = YES;
+    _sharkReferenceSprite.visible = YES;
 }
 
 - (void) tutorial
@@ -274,14 +290,19 @@ static BOOL hasGameBeenPlayed;
 
 - (void) scoreCounter
 {
-        _scoreNumber ++;
-        _score.string = [NSString stringWithFormat:@"%d", _scoreNumber];
+    _scoreNumber ++;
+    _score.string = [NSString stringWithFormat:@"%d", _scoreNumber];
 }
 
 //TODO: Add distance from shark
-- (void) findDistance
+- (CGFloat) findDistance
 {
-    CGFloat distanceBetweenCharAndShark = ccpDistance(_characterNode.position, _sharkNode.position);
+    return  ccpDistance(_characterNode.position, _sharkNode.position) / 2;
+}
+
+- (void) setDistanceOfSharkAndTurtle
+{
+    _turtleReferencePosition.position = ccp([self findDistance], 0);
 }
 
 #pragma mark - Update Method
@@ -298,6 +319,9 @@ static BOOL hasGameBeenPlayed;
             _characterNode.didCollide = false;
         }
     }
+    
+    [self setDistanceOfSharkAndTurtle];
+    
     if (_characterNode.position.x > 600) {
         [self scoreCounter];
     }
