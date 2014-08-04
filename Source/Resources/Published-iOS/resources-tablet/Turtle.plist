@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>Turtle/3307-Perler_Turtle.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {157, 115}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {157, 115}}</string>
+			<key>sourceSize</key>
+			<string>{157, 115}</string>
+		</dict>
+		<key>Turtle/TurtleWalk01.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{160, 36}, {47, 34}}</string>
+			<key>offset</key>
+			<string>{1, -1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{3, 4}, {47, 34}}</string>
+			<key>sourceSize</key>
+			<string>{50, 40}</string>
+		</dict>
+		<key>Turtle/TurtleWalk02.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{160, 1}, {48, 33}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 4}, {48, 33}}</string>
+			<key>sourceSize</key>
+			<string>{50, 40}</string>
+		</dict>
+		<key>Turtle/TurtleWalk03.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{160, 72}, {47, 34}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{2, 3}, {47, 34}}</string>
+			<key>sourceSize</key>
+			<string>{50, 40}</string>
+		</dict>
+		<key>Turtle/TurtleWalk04.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{209, 38}, {46, 34}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{2, 5}, {46, 34}}</string>
+			<key>sourceSize</key>
+			<string>{50, 40}</string>
+		</dict>
+		<key>Turtle/TurtleWalk05.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{210, 1}, {44, 35}}</string>
+			<key>offset</key>
+			<string>{-1, -1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{2, 4}, {44, 35}}</string>
+			<key>sourceSize</key>
+			<string>{50, 40}</string>
+		</dict>
+		<key>Turtle/TurtleWalk06.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{209, 74}, {44, 33}}</string>
+			<key>offset</key>
+			<string>{0, -1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{3, 5}, {44, 33}}</string>
+			<key>sourceSize</key>
+			<string>{50, 40}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{256, 256}</string>
+		<key>textureFileName</key>
+		<string>Turtle.png</string>
+	</dict>
+</dict>
+</plist>

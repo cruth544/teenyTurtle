@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>TurtleResources/Starfish-Normal@4x.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {172, 173}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {172, 173}}</string>
+			<key>sourceSize</key>
+			<string>{172, 173}</string>
+		</dict>
+		<key>TurtleResources/gestureArrow.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 480}, {14, 19}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {14, 19}}</string>
+			<key>sourceSize</key>
+			<string>{16, 21}</string>
+		</dict>
+		<key>TurtleResources/gestureDown@4x.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 176}, {93, 150}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {93, 150}}</string>
+			<key>sourceSize</key>
+			<string>{93, 150}</string>
+		</dict>
+		<key>TurtleResources/gestureHand@4x.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{95, 328}, {78, 143}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {78, 143}}</string>
+			<key>sourceSize</key>
+			<string>{78, 143}</string>
+		</dict>
+		<key>TurtleResources/gestureUp@4x.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 328}, {92, 150}}</string>
+			<key>offset</key>
+			<string>{0, -1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 1}, {92, 150}}</string>
+			<key>sourceSize</key>
+			<string>{92, 151}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{512, 512}</string>
+		<key>textureFileName</key>
+		<string>TurtleResources.png</string>
+	</dict>
+</dict>
+</plist>
