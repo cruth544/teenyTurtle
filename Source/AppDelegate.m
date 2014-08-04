@@ -29,6 +29,8 @@
 #import "CCBuilderReader.h"
 
 @implementation AppController
+{
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -58,8 +60,9 @@
 }
 
 - (CCScene*) startScene
-{
-    return [CCBReader loadAsScene:@"StartScene"];
+{   
+    return [CCBReader loadAsScene:@"Tutorials/Tutorial1"];
 }
+
 
 @end

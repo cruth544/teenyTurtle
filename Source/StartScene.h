@@ -1,5 +1,5 @@
 //
-//  Levels.h
+//  StartScene.h
 //  OneClickCharlie
 //
 //  Created by Chad Rutherford on 7/3/14.
@@ -8,6 +8,8 @@
 
 #import "CCNode.h"
 
-@interface Levels : CCNode
+@interface StartScene : CCNode
+
+
 
 @end

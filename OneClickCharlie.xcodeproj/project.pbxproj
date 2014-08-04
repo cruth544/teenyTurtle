@@ -8,10 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
-		84EE20021965C5D50021F73B /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE20011965C5D50021F73B /* Character.m */; };
-		84EE20061965C5EB0021F73B /* Levels.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE20051965C5EB0021F73B /* Levels.m */; };
-		84EE20091965C6D60021F73B /* GamePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE20081965C6D60021F73B /* GamePlayScene.m */; };
-		84EE20101965D9850021F73B /* StartScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE200F1965D9850021F73B /* StartScene.m */; };
+		8411E8D219805B7B00D7DD86 /* CCActionMoveToNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411E8D119805B7B00D7DD86 /* CCActionMoveToNode.m */; };
+		8411E8DF19805BBB00D7DD86 /* StartScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411E8D419805BBB00D7DD86 /* StartScene.m */; };
+		8411E8E019805BBB00D7DD86 /* Shark.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411E8D619805BBB00D7DD86 /* Shark.m */; };
+		8411E8E119805BBB00D7DD86 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411E8D819805BBB00D7DD86 /* Character.m */; };
+		8411E8E219805BBB00D7DD86 /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411E8DA19805BBB00D7DD86 /* GameOver.m */; };
+		8411E8E319805BBB00D7DD86 /* GamePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411E8DC19805BBB00D7DD86 /* GamePlayScene.m */; };
+		8411E8E419805BBB00D7DD86 /* ObstacleHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411E8DE19805BBB00D7DD86 /* ObstacleHolder.m */; };
+		8411E8E7198181D700D7DD86 /* Tutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411E8E6198181D700D7DD86 /* Tutorial.m */; };
+		84D7CBE5198C153200301BB5 /* GruntBirthdayParty.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84D7CBE4198C153200301BB5 /* GruntBirthdayParty.mp3 */; };
+		84D7CBE8198C1FFD00301BB5 /* TutorialLive.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D7CBE7198C1FFD00301BB5 /* TutorialLive.m */; };
+		84D7CBEA198C205200301BB5 /* Starfish.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D7CBE9198C205200301BB5 /* Starfish.m */; };
+		84D7CBEE198C217500301BB5 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D7CBED198C217500301BB5 /* MainMenu.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -60,14 +68,29 @@
 
 /* Begin PBXFileReference section */
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		84EE20001965C5D50021F73B /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
-		84EE20011965C5D50021F73B /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
-		84EE20041965C5EB0021F73B /* Levels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Levels.h; sourceTree = "<group>"; };
-		84EE20051965C5EB0021F73B /* Levels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Levels.m; sourceTree = "<group>"; };
-		84EE20071965C6D60021F73B /* GamePlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePlayScene.h; sourceTree = "<group>"; };
-		84EE20081965C6D60021F73B /* GamePlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayScene.m; sourceTree = "<group>"; };
-		84EE200E1965D9850021F73B /* StartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScene.h; sourceTree = "<group>"; };
-		84EE200F1965D9850021F73B /* StartScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartScene.m; sourceTree = "<group>"; };
+		8411E8D019805B7B00D7DD86 /* CCActionMoveToNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCActionMoveToNode.h; path = Source/CCActionMoveToNode.h; sourceTree = "<group>"; };
+		8411E8D119805B7B00D7DD86 /* CCActionMoveToNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCActionMoveToNode.m; path = Source/CCActionMoveToNode.m; sourceTree = "<group>"; };
+		8411E8D319805BBB00D7DD86 /* StartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartScene.h; path = Source/StartScene.h; sourceTree = "<group>"; };
+		8411E8D419805BBB00D7DD86 /* StartScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartScene.m; path = Source/StartScene.m; sourceTree = "<group>"; };
+		8411E8D519805BBB00D7DD86 /* Shark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shark.h; path = Source/Shark.h; sourceTree = "<group>"; };
+		8411E8D619805BBB00D7DD86 /* Shark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shark.m; path = Source/Shark.m; sourceTree = "<group>"; };
+		8411E8D719805BBB00D7DD86 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Character.h; path = Source/Character.h; sourceTree = "<group>"; };
+		8411E8D819805BBB00D7DD86 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Character.m; path = Source/Character.m; sourceTree = "<group>"; };
+		8411E8D919805BBB00D7DD86 /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOver.h; path = Source/GameOver.h; sourceTree = "<group>"; };
+		8411E8DA19805BBB00D7DD86 /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameOver.m; path = Source/GameOver.m; sourceTree = "<group>"; };
+		8411E8DB19805BBB00D7DD86 /* GamePlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePlayScene.h; path = Source/GamePlayScene.h; sourceTree = "<group>"; };
+		8411E8DC19805BBB00D7DD86 /* GamePlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GamePlayScene.m; path = Source/GamePlayScene.m; sourceTree = "<group>"; };
+		8411E8DD19805BBB00D7DD86 /* ObstacleHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObstacleHolder.h; path = Source/ObstacleHolder.h; sourceTree = "<group>"; };
+		8411E8DE19805BBB00D7DD86 /* ObstacleHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObstacleHolder.m; path = Source/ObstacleHolder.m; sourceTree = "<group>"; };
+		8411E8E5198181D700D7DD86 /* Tutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tutorial.h; path = Source/Tutorial.h; sourceTree = "<group>"; };
+		8411E8E6198181D700D7DD86 /* Tutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tutorial.m; path = Source/Tutorial.m; sourceTree = "<group>"; };
+		84D7CBE4198C153200301BB5 /* GruntBirthdayParty.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GruntBirthdayParty.mp3; sourceTree = "<group>"; };
+		84D7CBE6198C1FFD00301BB5 /* TutorialLive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TutorialLive.h; path = Source/TutorialLive.h; sourceTree = "<group>"; };
+		84D7CBE7198C1FFD00301BB5 /* TutorialLive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TutorialLive.m; path = Source/TutorialLive.m; sourceTree = "<group>"; };
+		84D7CBE9198C205200301BB5 /* Starfish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Starfish.m; path = Source/Starfish.m; sourceTree = "<group>"; };
+		84D7CBEB198C205A00301BB5 /* Starfish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Starfish.h; path = Source/Starfish.h; sourceTree = "<group>"; };
+		84D7CBEC198C217500301BB5 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenu.h; path = Source/MainMenu.h; sourceTree = "<group>"; };
+		84D7CBED198C217500301BB5 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainMenu.m; path = Source/MainMenu.m; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -123,6 +146,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84D7CBD9198BF49200301BB5 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				84D7CBEB198C205A00301BB5 /* Starfish.h */,
+				84D7CBE9198C205200301BB5 /* Starfish.m */,
+				8411E8D719805BBB00D7DD86 /* Character.h */,
+				8411E8D819805BBB00D7DD86 /* Character.m */,
+				8411E8D519805BBB00D7DD86 /* Shark.h */,
+				8411E8D619805BBB00D7DD86 /* Shark.m */,
+			);
+			name = Characters;
+			sourceTree = "<group>";
+		};
+		84D7CBDB198BF4A900301BB5 /* Game Mechanics */ = {
+			isa = PBXGroup;
+			children = (
+				8411E8D319805BBB00D7DD86 /* StartScene.h */,
+				8411E8D419805BBB00D7DD86 /* StartScene.m */,
+				8411E8D919805BBB00D7DD86 /* GameOver.h */,
+				8411E8DA19805BBB00D7DD86 /* GameOver.m */,
+				8411E8DD19805BBB00D7DD86 /* ObstacleHolder.h */,
+				8411E8DE19805BBB00D7DD86 /* ObstacleHolder.m */,
+			);
+			name = "Game Mechanics";
+			sourceTree = "<group>";
+		};
+		84D7CBE3198C151600301BB5 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				84D7CBE4198C153200301BB5 /* GruntBirthdayParty.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		9222E2B918734FF800A246C7 /* libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,16 +191,18 @@
 		B737893C1807616C0076A88C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				84D7CBEC198C217500301BB5 /* MainMenu.h */,
+				84D7CBED198C217500301BB5 /* MainMenu.m */,
+				8411E8E5198181D700D7DD86 /* Tutorial.h */,
+				8411E8E6198181D700D7DD86 /* Tutorial.m */,
+				84D7CBE6198C1FFD00301BB5 /* TutorialLive.h */,
+				84D7CBE7198C1FFD00301BB5 /* TutorialLive.m */,
+				8411E8DB19805BBB00D7DD86 /* GamePlayScene.h */,
+				8411E8DC19805BBB00D7DD86 /* GamePlayScene.m */,
 				B737893D1807617C0076A88C /* AppDelegate.h */,
 				B737893E1807617C0076A88C /* AppDelegate.m */,
-				84EE20071965C6D60021F73B /* GamePlayScene.h */,
-				84EE20081965C6D60021F73B /* GamePlayScene.m */,
-				84EE200E1965D9850021F73B /* StartScene.h */,
-				84EE200F1965D9850021F73B /* StartScene.m */,
-				84EE20001965C5D50021F73B /* Character.h */,
-				84EE20011965C5D50021F73B /* Character.m */,
-				84EE20041965C5EB0021F73B /* Levels.h */,
-				84EE20051965C5EB0021F73B /* Levels.m */,
+				8411E8D019805B7B00D7DD86 /* CCActionMoveToNode.h */,
+				8411E8D119805B7B00D7DD86 /* CCActionMoveToNode.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -181,11 +240,13 @@
 			isa = PBXGroup;
 			children = (
 				B737893C1807616C0076A88C /* Source */,
+				84D7CBDB198BF4A900301BB5 /* Game Mechanics */,
+				84D7CBD9198BF49200301BB5 /* Characters */,
 				B77F1B4617B978D7009739AE /* Resources */,
 				9222E2B918734FF800A246C7 /* libs */,
 				B77F1CCF17B978D8009739AE /* Supporting Files */,
-				B77F1B3017B978D7009739AE /* Frameworks */,
 				B77F1B2F17B978D7009739AE /* Products */,
+				B77F1B3017B978D7009739AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,6 +279,7 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				84D7CBE3198C151600301BB5 /* Sounds */,
 				B73789911807667A0076A88C /* Icons */,
 				B737893A180761570076A88C /* Published-iOS */,
 			);
@@ -266,7 +328,7 @@
 				ORGANIZATIONNAME = Apportable;
 				TargetAttributes = {
 					B77F1B2D17B978D7009739AE = {
-						DevelopmentTeam = SBVP8ED765;
+						DevelopmentTeam = FF2U2NL5NB;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -326,6 +388,7 @@
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
+				84D7CBE5198C153200301BB5 /* GruntBirthdayParty.mp3 in Resources */,
 				B7378977180762440076A88C /* Default.png in Resources */,
 				B71F5911188484E7003F4D28 /* iPad-old.png in Resources */,
 			);
@@ -356,11 +419,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
+				84D7CBE8198C1FFD00301BB5 /* TutorialLive.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
-				84EE20021965C5D50021F73B /* Character.m in Sources */,
-				84EE20091965C6D60021F73B /* GamePlayScene.m in Sources */,
-				84EE20101965D9850021F73B /* StartScene.m in Sources */,
-				84EE20061965C5EB0021F73B /* Levels.m in Sources */,
+				8411E8E019805BBB00D7DD86 /* Shark.m in Sources */,
+				8411E8D219805B7B00D7DD86 /* CCActionMoveToNode.m in Sources */,
+				8411E8E219805BBB00D7DD86 /* GameOver.m in Sources */,
+				84D7CBEA198C205200301BB5 /* Starfish.m in Sources */,
+				8411E8E7198181D700D7DD86 /* Tutorial.m in Sources */,
+				8411E8E319805BBB00D7DD86 /* GamePlayScene.m in Sources */,
+				8411E8DF19805BBB00D7DD86 /* StartScene.m in Sources */,
+				8411E8E119805BBB00D7DD86 /* Character.m in Sources */,
+				8411E8E419805BBB00D7DD86 /* ObstacleHolder.m in Sources */,
+				84D7CBEE198C217500301BB5 /* MainMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

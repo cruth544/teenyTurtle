@@ -7,11 +7,11 @@
 //
 
 #import "StartScene.h"
-#import "GamePlayScene.h"
 
 @implementation StartScene
 
--(void) playButton {
+- (void) startButton
+{
     //starts game with Play Button
     CCScene *gamePlayScene = [CCBReader loadAsScene:@"GamePlayScene"];
     [[CCDirector sharedDirector] replaceScene:gamePlayScene];

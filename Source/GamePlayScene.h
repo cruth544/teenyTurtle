@@ -1,5 +1,5 @@
 //
-//  Character.h
+//  GamePlayScene.h
 //  OneClickCharlie
 //
 //  Created by Chad Rutherford on 7/3/14.
@@ -8,12 +8,11 @@
 
 #import "CCNode.h"
 
-@interface Character : CCNode
 
 
--(void)jump;
--(void)reverseGravity;
--(void)stopMoving;
--(void)teleport;
+
+@interface GamePlayScene : CCNode <CCPhysicsCollisionDelegate>
+
+
 
 @end

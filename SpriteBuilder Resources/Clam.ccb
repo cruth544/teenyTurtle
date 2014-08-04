@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>6</integer>
+	<integer>2</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -24,9 +24,9 @@
 	<key>fileVersion</key>
 	<integer>4</integer>
 	<key>gridspaceHeight</key>
-	<integer>64</integer>
+	<integer>32</integer>
 	<key>gridspaceWidth</key>
-	<integer>64</integer>
+	<integer>32</integer>
 	<key>guides</key>
 	<array/>
 	<key>joints</key>
@@ -42,130 +42,6 @@
 			<dict>
 				<key>UUID</key>
 				<integer>1</integer>
-				<key>animatedProperties</key>
-				<dict>
-					<key>0</key>
-					<dict>
-						<key>spriteFrame</key>
-						<dict>
-							<key>keyframes</key>
-							<array>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>0</integer>
-									</dict>
-									<key>name</key>
-									<string>spriteFrame</string>
-									<key>time</key>
-									<real>0.0</real>
-									<key>type</key>
-									<integer>7</integer>
-									<key>value</key>
-									<array>
-										<string>Turtle/TurtleWalk01.png</string>
-										<string>Use regular file</string>
-									</array>
-								</dict>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>0</integer>
-									</dict>
-									<key>name</key>
-									<string>spriteFrame</string>
-									<key>time</key>
-									<real>0.066666670143604279</real>
-									<key>type</key>
-									<integer>7</integer>
-									<key>value</key>
-									<array>
-										<string>Turtle/TurtleWalk02.png</string>
-										<string>Use regular file</string>
-									</array>
-								</dict>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>0</integer>
-									</dict>
-									<key>name</key>
-									<string>spriteFrame</string>
-									<key>time</key>
-									<real>0.13333334028720856</real>
-									<key>type</key>
-									<integer>7</integer>
-									<key>value</key>
-									<array>
-										<string>Turtle/TurtleWalk03.png</string>
-										<string>Use regular file</string>
-									</array>
-								</dict>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>0</integer>
-									</dict>
-									<key>name</key>
-									<string>spriteFrame</string>
-									<key>time</key>
-									<real>0.20000000298023224</real>
-									<key>type</key>
-									<integer>7</integer>
-									<key>value</key>
-									<array>
-										<string>Turtle/TurtleWalk04.png</string>
-										<string>Use regular file</string>
-									</array>
-								</dict>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>0</integer>
-									</dict>
-									<key>name</key>
-									<string>spriteFrame</string>
-									<key>time</key>
-									<real>0.26666668057441711</real>
-									<key>type</key>
-									<integer>7</integer>
-									<key>value</key>
-									<array>
-										<string>Turtle/TurtleWalk05.png</string>
-										<string>Use regular file</string>
-									</array>
-								</dict>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>0</integer>
-									</dict>
-									<key>name</key>
-									<string>spriteFrame</string>
-									<key>time</key>
-									<real>0.3333333432674408</real>
-									<key>type</key>
-									<integer>7</integer>
-									<key>value</key>
-									<array>
-										<string>Turtle/TurtleWalk06.png</string>
-										<string>Use regular file</string>
-									</array>
-								</dict>
-							</array>
-							<key>name</key>
-							<string>spriteFrame</string>
-							<key>type</key>
-							<integer>7</integer>
-						</dict>
-					</dict>
-				</dict>
 				<key>baseClass</key>
 				<string>CCSprite</string>
 				<key>children</key>
@@ -173,7 +49,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCSprite</string>
+				<string>Clam_Black_Pearl</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -195,11 +71,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
-							<real>0.5</real>
+							<real>0.0</real>
+							<real>0.0</real>
 							<integer>0</integer>
-							<integer>2</integer>
-							<integer>2</integer>
+							<integer>0</integer>
+							<integer>0</integer>
 						</array>
 					</dict>
 					<dict>
@@ -209,8 +85,8 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
-							<real>0.5</real>
+							<real>0.0</real>
+							<real>0.0</real>
 						</array>
 					</dict>
 					<dict>
@@ -220,18 +96,13 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.30000001192092896</real>
+							<real>0.30000001192092896</real>
 							<false/>
 							<integer>0</integer>
 						</array>
 					</dict>
 					<dict>
-						<key>baseValue</key>
-						<array>
-							<string>Turtle/TurtleWalk01.png</string>
-							<string>Use regular file</string>
-						</array>
 						<key>name</key>
 						<string>spriteFrame</string>
 						<key>type</key>
@@ -239,7 +110,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Turtle/TurtleWalk01.png</string>
+							<string>ArchitectureAssets/Clam_Black_Pearl.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -267,12 +138,10 @@
 						</array>
 					</dict>
 				</array>
-				<key>seqExpanded</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>Character</string>
+		<string></string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
@@ -284,7 +153,7 @@
 			<key>affectedByGravity</key>
 			<true/>
 			<key>allowsRotation</key>
-			<false/>
+			<true/>
 			<key>bodyShape</key>
 			<integer>0</integer>
 			<key>collisionCategories</key>
@@ -296,58 +165,144 @@
 			<key>cornerRadius</key>
 			<real>0.0</real>
 			<key>density</key>
-			<real>6</real>
+			<real>1</real>
 			<key>dynamic</key>
-			<true/>
+			<false/>
 			<key>elasticity</key>
-			<real>0.0</real>
+			<real>0.30000001192092896</real>
 			<key>friction</key>
-			<real>0.0</real>
+			<real>0.30000001192092896</real>
 			<key>points</key>
 			<array>
 				<array>
-					<real>0.46553137898445129</real>
-					<real>0.32386165857315063</real>
+					<real>3.789031982421875</real>
+					<real>29.953125</real>
 				</array>
 				<array>
-					<real>0.01263107918202877</real>
-					<real>13.210014343261719</real>
+					<real>23.292938232421875</real>
+					<real>35.3828125</real>
 				</array>
 				<array>
-					<real>10.376204490661621</real>
-					<real>18.391799926757812</real>
+					<real>44.136688232421875</real>
+					<real>51.12109375</real>
 				</array>
 				<array>
-					<real>20.09205436706543</real>
-					<real>16.448631286621094</real>
+					<real>48.179656982421875</real>
+					<real>66.65625</real>
 				</array>
 				<array>
-					<real>19.897232055664062</real>
-					<real>2.2670316696166992</real>
+					<real>38.996063232421875</real>
+					<real>80.31640625</real>
+				</array>
+				<array>
+					<real>44.039031982421875</real>
+					<real>94.625</real>
+				</array>
+				<array>
+					<real>65.417938232421875</real>
+					<real>88.99609375</real>
+				</array>
+				<array>
+					<real>83.773406982421875</real>
+					<real>73.69921875</real>
+				</array>
+				<array>
+					<real>92.308563232421875</real>
+					<real>39.87109375</real>
+				</array>
+				<array>
+					<real>80.039031982421875</real>
+					<real>13.1953125</real>
+				</array>
+				<array>
+					<real>45.160125732421875</real>
+					<real>-1.30078125</real>
+				</array>
+				<array>
+					<real>10.468719482421875</real>
+					<real>8.13671875</real>
 				</array>
 			</array>
 			<key>polygons</key>
 			<array>
 				<array>
 					<array>
-						<real>19.897232055664062</real>
-						<real>2.2670316696166992</real>
+						<real>65.417938232421875</real>
+						<real>88.99609375</real>
 					</array>
 					<array>
-						<real>20.09205436706543</real>
-						<real>16.448631286621094</real>
+						<real>44.039031982421875</real>
+						<real>94.625</real>
 					</array>
 					<array>
-						<real>10.376204490661621</real>
-						<real>18.391799926757812</real>
+						<real>38.996063232421875</real>
+						<real>80.31640625</real>
 					</array>
 					<array>
-						<real>0.01263107918202877</real>
-						<real>13.210014343261719</real>
+						<real>48.179656982421875</real>
+						<real>66.65625</real>
+					</array>
+				</array>
+				<array>
+					<array>
+						<real>83.773406982421875</real>
+						<real>73.69921875</real>
 					</array>
 					<array>
-						<real>0.46553137898445129</real>
-						<real>0.32386165857315063</real>
+						<real>65.417938232421875</real>
+						<real>88.99609375</real>
+					</array>
+					<array>
+						<real>48.179656982421875</real>
+						<real>66.65625</real>
+					</array>
+					<array>
+						<real>44.136688232421875</real>
+						<real>51.12109375</real>
+					</array>
+				</array>
+				<array>
+					<array>
+						<real>23.292938232421875</real>
+						<real>35.3828125</real>
+					</array>
+					<array>
+						<real>3.789031982421875</real>
+						<real>29.953125</real>
+					</array>
+					<array>
+						<real>10.468719482421875</real>
+						<real>8.13671875</real>
+					</array>
+				</array>
+				<array>
+					<array>
+						<real>10.468719482421875</real>
+						<real>8.13671875</real>
+					</array>
+					<array>
+						<real>45.160125732421875</real>
+						<real>-1.30078125</real>
+					</array>
+					<array>
+						<real>80.039031982421875</real>
+						<real>13.1953125</real>
+					</array>
+					<array>
+						<real>92.308563232421875</real>
+						<real>39.87109375</real>
+					</array>
+					<array>
+						<real>83.773406982421875</real>
+						<real>73.69921875</real>
+					</array>
+					<array>
+						<real>44.136688232421875</real>
+						<real>51.12109375</real>
+					</array>
+					<array>
+						<real>23.292938232421875</real>
+						<real>35.3828125</real>
 					</array>
 				</array>
 			</array>
@@ -383,8 +338,8 @@
 				<string>Size</string>
 				<key>value</key>
 				<array>
-					<real>20</real>
-					<real>20</real>
+					<real>0.0</real>
+					<real>0.0</real>
 					<integer>0</integer>
 					<integer>0</integer>
 				</array>
@@ -463,47 +418,11 @@
 				<integer>12</integer>
 			</dict>
 			<key>chainedSequenceId</key>
-			<integer>0</integer>
-			<key>length</key>
-			<real>0.3333333432674408</real>
-			<key>name</key>
-			<string>Running</string>
-			<key>offset</key>
-			<real>0.0</real>
-			<key>position</key>
-			<real>0.3333333432674408</real>
-			<key>resolution</key>
-			<real>30</real>
-			<key>scale</key>
-			<real>512</real>
-			<key>sequenceId</key>
-			<integer>0</integer>
-			<key>soundChannel</key>
-			<dict>
-				<key>isExpanded</key>
-				<false/>
-				<key>keyframes</key>
-				<array/>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>autoPlay</key>
-			<false/>
-			<key>callbackChannel</key>
-			<dict>
-				<key>keyframes</key>
-				<array/>
-				<key>type</key>
-				<integer>12</integer>
-			</dict>
-			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
-			<real>10</real>
+			<real>0.033333335071802139</real>
 			<key>name</key>
-			<string>Idle</string>
+			<string>Default Timeline</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
@@ -513,7 +432,7 @@
 			<key>scale</key>
 			<real>128</real>
 			<key>sequenceId</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>soundChannel</key>
 			<dict>
 				<key>isExpanded</key>

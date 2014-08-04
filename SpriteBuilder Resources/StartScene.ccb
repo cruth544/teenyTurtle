@@ -130,6 +130,14 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>opacity</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.5</real>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>color</string>
 						<key>type</key>
 						<string>Color3</string>
@@ -138,7 +146,7 @@
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
 						</array>
 					</dict>
 					<dict>
@@ -174,6 +182,8 @@
 						<real>0.33000001311302185</real>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -245,7 +255,7 @@
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string>playButton</string>
+							<string>startButton</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -500,8 +510,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -637,7 +645,7 @@
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
-			<real>10</real>
+			<real>0.033333335071802139</real>
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>

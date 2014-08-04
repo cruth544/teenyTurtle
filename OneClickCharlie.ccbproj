@@ -92,6 +92,16 @@
 		</dict>
 		<key>Sprites</key>
 		<dict/>
+		<key>Turtle</key>
+		<dict>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+		</dict>
+		<key>TurtleResources</key>
+		<dict>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+		</dict>
 		<key>ccbResources</key>
 		<dict>
 			<key>previewFolderHidden</key>
