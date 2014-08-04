@@ -111,8 +111,8 @@ playerUpdateVelocity(cpBody *body, cpVect gravity, cpFloat damping, cpFloat dt)
 }
 
 - (void) reduceOutOfWaterForce {
+    
 }
-
 
 #pragma mark - teleport method
 
