@@ -24,6 +24,7 @@ static BOOL hasGameBeenPlayed;
     Shark *_sharkNode;
     Starfish *_starfishNode;
     
+    int _starfishCounter;
     CCNode *_turtleReferencePosition;
     CCSprite *_sharkReferenceSprite;
     
@@ -217,7 +218,7 @@ static BOOL hasGameBeenPlayed;
 - (BOOL) ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair character:(Character *)character starfish:(CCNode *)starfish
 {
     [self removeStarfish:starfish];
-    CCLOG(@"got starfish");
+    _starfishCounter ++;
     return YES;
 }
 
@@ -297,12 +298,13 @@ static BOOL hasGameBeenPlayed;
 //TODO: Add distance from shark
 - (CGFloat) findDistance
 {
-    return  ccpDistance(_characterNode.position, _sharkNode.position) / 2;
+    return (_characterNode.position.x - _sharkNode.position.x) / 3;
+//    return  ccpDistance(_characterNode.position, _sharkNode.position) / 2;
 }
 
 - (void) setDistanceOfSharkAndTurtle
 {
-    _turtleReferencePosition.position = ccp([self findDistance], 0);
+    _turtleReferencePosition.position = ccp([self findDistance] + 20, 0);
 }
 
 #pragma mark - Update Method

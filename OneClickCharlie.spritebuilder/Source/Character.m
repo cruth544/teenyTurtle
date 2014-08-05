@@ -10,6 +10,8 @@
 #define CP_ALLOW_PRIVATE_ACCESS 1
 #import "CCPhysics+ObjectiveChipmunk.h"
 
+static float characterPosition;
+
 @implementation Character
 {
     BOOL _didJump;
@@ -110,8 +112,14 @@ playerUpdateVelocity(cpBody *body, cpVect gravity, cpFloat damping, cpFloat dt)
     _crossedWater = !_crossedWater;
 }
 
-- (void) reduceOutOfWaterForce {
+- (void) reduceOutOfWaterForce
+{
     
+}
+
++ (float) characterPosition
+{
+    return characterPosition;
 }
 
 #pragma mark - teleport method
@@ -146,6 +154,10 @@ playerUpdateVelocity(cpBody *body, cpVect gravity, cpFloat damping, cpFloat dt)
     _didJump = FALSE;
 }
 
+- (void) update:(CCTime)delta
+{
+    characterPosition = self.position.y;
+}
 
 
 @end

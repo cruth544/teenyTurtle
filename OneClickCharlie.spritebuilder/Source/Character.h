@@ -27,5 +27,6 @@
 - (void) downGravity;
 - (void) outOfWaterGravity;
 - (void) teleport;
++ (float) characterPosition;
 
 @end
