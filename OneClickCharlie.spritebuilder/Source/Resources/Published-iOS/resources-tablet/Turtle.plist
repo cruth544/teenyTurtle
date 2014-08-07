@@ -4,96 +4,83 @@
 <dict>
 	<key>frames</key>
 	<dict>
-		<key>Turtle/3307-Perler_Turtle.png</key>
+		<key>Turtle/TurtleBelly.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 1}, {157, 115}}</string>
+			<string>{{320, 1}, {317, 83}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceColorRect</key>
-			<string>{{0, 0}, {157, 115}}</string>
+			<string>{{0, 0}, {317, 83}}</string>
 			<key>sourceSize</key>
-			<string>{157, 115}</string>
+			<string>{317, 83}</string>
 		</dict>
-		<key>Turtle/TurtleWalk01.png</key>
+		<key>Turtle/TurtleBody.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{160, 36}, {47, 34}}</string>
-			<key>offset</key>
-			<string>{1, -1}</string>
-			<key>rotated</key>
-			<false/>
-			<key>sourceColorRect</key>
-			<string>{{3, 4}, {47, 34}}</string>
-			<key>sourceSize</key>
-			<string>{50, 40}</string>
-		</dict>
-		<key>Turtle/TurtleWalk02.png</key>
-		<dict>
-			<key>frame</key>
-			<string>{{160, 1}, {48, 33}}</string>
+			<string>{{1, 1}, {317, 208}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceColorRect</key>
-			<string>{{1, 4}, {48, 33}}</string>
+			<string>{{0, 0}, {317, 208}}</string>
 			<key>sourceSize</key>
-			<string>{50, 40}</string>
+			<string>{317, 208}</string>
 		</dict>
-		<key>Turtle/TurtleWalk03.png</key>
+		<key>Turtle/TurtleHead.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{160, 72}, {47, 34}}</string>
+			<string>{{320, 86}, {250, 196}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceColorRect</key>
-			<string>{{2, 3}, {47, 34}}</string>
+			<string>{{0, 0}, {250, 196}}</string>
 			<key>sourceSize</key>
-			<string>{50, 40}</string>
+			<string>{250, 196}</string>
 		</dict>
-		<key>Turtle/TurtleWalk04.png</key>
+		<key>Turtle/TurtleLeg.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{209, 38}, {46, 34}}</string>
+			<string>{{1, 211}, {129, 210}}</string>
 			<key>offset</key>
-			<string>{0, -2}</string>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {129, 210}}</string>
+			<key>sourceSize</key>
+			<string>{129, 210}</string>
+		</dict>
+		<key>Turtle/TurtleShell.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{639, 1}, {314, 207}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceColorRect</key>
-			<string>{{2, 5}, {46, 34}}</string>
+			<string>{{0, 0}, {314, 207}}</string>
 			<key>sourceSize</key>
-			<string>{50, 40}</string>
+			<string>{314, 207}</string>
 		</dict>
-		<key>Turtle/TurtleWalk05.png</key>
+		<key>Turtle/TurtleShortLegs.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{210, 1}, {44, 35}}</string>
+			<string>{{213, 211}, {94, 117}}</string>
 			<key>offset</key>
-			<string>{-1, -1}</string>
+			<string>{0, 0}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceColorRect</key>
-			<string>{{2, 4}, {44, 35}}</string>
+			<string>{{0, 0}, {94, 117}}</string>
 			<key>sourceSize</key>
-			<string>{50, 40}</string>
-		</dict>
-		<key>Turtle/TurtleWalk06.png</key>
-		<dict>
-			<key>frame</key>
-			<string>{{209, 74}, {44, 33}}</string>
-			<key>offset</key>
-			<string>{0, -1}</string>
-			<key>rotated</key>
-			<false/>
-			<key>sourceColorRect</key>
-			<string>{{3, 5}, {44, 33}}</string>
-			<key>sourceSize</key>
-			<string>{50, 40}</string>
+			<string>{94, 117}</string>
 		</dict>
 	</dict>
 	<key>metadata</key>
@@ -101,7 +88,7 @@
 		<key>format</key>
 		<integer>2</integer>
 		<key>size</key>
-		<string>{256, 256}</string>
+		<string>{1024, 1024}</string>
 		<key>textureFileName</key>
 		<string>Turtle.png</string>
 	</dict>

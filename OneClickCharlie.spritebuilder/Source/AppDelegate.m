@@ -56,6 +56,9 @@
     
     [self setupCocos2dWithOptions:cocos2dSetup];
     
+    [MGWU loadMGWU:@"secretkey"];
+//    [MGWU dark];
+    
     return YES;
 }
 

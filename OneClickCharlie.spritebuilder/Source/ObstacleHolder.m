@@ -58,9 +58,9 @@
         [clam setPosition:ccp(0, 18)];
     } else if (_randomizer >= 6) {
         CCNode *starfish = [CCBReader load:@"Levels/starGroup1"];
-            [_obstacles addChild:starfish z:95];
-            float yPosition = arc4random() % 300;
-            [starfish setPosition:ccp(0, yPosition + 10)];
+            [_obstacles addChild:starfish z:99];
+            float yPosition = arc4random() % 250;
+            [starfish setPosition:ccp(0, yPosition + 30)];
     }
 }
 

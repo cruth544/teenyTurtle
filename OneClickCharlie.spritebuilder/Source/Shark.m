@@ -43,6 +43,8 @@
         [self scheduleBlock:^(CCTimer *timer) {
             CCActionMoveToNode *followCharacter = [CCActionMoveToNode actionWithSpeed:sharkSpeed targetNode:_turtleTarget followInfinite:YES];
             [self runAction:followCharacter];
+            self.visible = YES;
+            self.paused = NO;
         } delay:2.5f];
         didMethodRun = YES;
     }

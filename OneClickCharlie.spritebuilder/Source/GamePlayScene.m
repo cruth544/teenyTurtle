@@ -12,6 +12,8 @@
 #import "GameOver.h"
 #import "Shark.h"
 #import "Starfish.h"
+#import "NSUserDefaults+Encryption.h"
+
 
 
 static BOOL hasGameBeenPlayed;
@@ -24,12 +26,17 @@ static BOOL hasGameBeenPlayed;
     Shark *_sharkNode;
     Starfish *_starfishNode;
     
-    int _starfishCounter;
+    int _starfishCollectedThisGame;
+    NSNumber *_numberOfStarfish;
+    CCLabelTTF *_numberOfStarsCollected;
+    
     CCNode *_turtleReferencePosition;
     CCSprite *_sharkReferenceSprite;
     
     int _scoreNumber;
     CCLabelTTF *_score;
+    
+    CCNodeColor *_oxygenMeter;
     
     CCNode *_mainMenu;
     
@@ -60,20 +67,22 @@ static BOOL hasGameBeenPlayed;
 {
     //enabling userinteraction
     self.userInteractionEnabled = YES;
+    
     //adding level to gamePlayScene Node
     CCNode *level = [CCBReader load:@"Levels/MainLevel"];
     [_physicsNode addChild:level];
-
-    _characterNode = (Character *)[CCBReader load:@"Character"];
+    
+    _characterNode = (Character *)[CCBReader load:@"Turtle"];
     [_physicsNode addChild:_characterNode z:99];
     _characterNode.physicsBody.collisionType = @"character";
-    [_characterNode setPosition:ccp(25, 36)];
+    [_characterNode setPosition:ccp(50, 36)];
     
     _sharkNode = (Shark *)[CCBReader load:@"Shark"];
     _sharkNode.turtleTarget = _characterNode;
     [_physicsNode addChild:_sharkNode z:100];
     _sharkNode.physicsBody.collisionType = @"shark";
     [_sharkNode setPosition:ccp(0, 0)];
+    _sharkNode.visible = NO;
     
     self.paused = YES;
     
@@ -83,8 +92,8 @@ static BOOL hasGameBeenPlayed;
     } else {
         self.paused = NO;
         _characterNode.paused = NO;
-        _sharkNode.paused = NO;
-        [self showDistanceSprites];
+//        _sharkNode.paused = NO;
+//        [self showDistanceSprites];
     }
     
     for (int i = 0; i < 5; i++) {
@@ -100,11 +109,6 @@ static BOOL hasGameBeenPlayed;
     }
     
     _physicsNode.collisionDelegate = self;
-
-//    left Swipe Recognizer
-    UISwipeGestureRecognizer *backwardRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(backwardSwipeHandle:)];
-    backwardRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
-    [[[CCDirector sharedDirector] view] addGestureRecognizer:backwardRecognizer];
 
 //    right Swipe Recognizer
     UISwipeGestureRecognizer *forwardRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(forwardSwipeHandle:)];
@@ -130,6 +134,8 @@ static BOOL hasGameBeenPlayed;
     CGFloat width = [[CCDirector sharedDirector] viewSize].width;
     CCActionFollow *follow = [CCActionFollow actionWithTarget:_characterNode worldBoundary:CGRectMake(0.f, 0.f, CGFLOAT_MAX, width)];
     [_physicsNode runAction:follow];
+    
+    [[NSUserDefaults standardUserDefaults] setEncryptionKey:@"myencryptionkey!"];
 }
 
 
@@ -141,16 +147,6 @@ static BOOL hasGameBeenPlayed;
 
 }
 
-- (void) touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
-{
-    
-}
-
-- (void) touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
-{
-    
-}
-
 - (void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
 //    [_characterNode jump];
@@ -159,14 +155,10 @@ static BOOL hasGameBeenPlayed;
 
 #pragma mark - Swipe Handlers
 
-- (void) backwardSwipeHandle:(UISwipeGestureRecognizer*)gestureRecognizer
-{
-    
-}
-
 - (void) forwardSwipeHandle:(UISwipeGestureRecognizer*)gestureRecognizer
 {
     [_characterNode teleport];
+    _characterNode.didCollide = true;
 }
 
 - (void) upwardSwipeHandle:(UISwipeGestureRecognizer*)gestureRecognizer
@@ -203,14 +195,12 @@ static BOOL hasGameBeenPlayed;
 
 - (BOOL) ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair character:(Character *)character clam:(CCNode *)clam
 {
-    self.paused = YES;
     [self gameOverPopup];
     return YES;
 }
 
 - (BOOL) ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair character:(Character *)character shark:(CCNode *)shark
 {
-    self.paused = YES;
     [self gameOverPopup];
     return YES;
 }
@@ -218,34 +208,38 @@ static BOOL hasGameBeenPlayed;
 - (BOOL) ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair character:(Character *)character starfish:(CCNode *)starfish
 {
     [self removeStarfish:starfish];
-    _starfishCounter ++;
+    _starfishCollectedThisGame ++;
     return YES;
 }
 
 #pragma mark - Custom Methods
 
+#pragma mark Begining Methods
 - (void) startGame
 {
     [_mainMenu removeFromParent];
     
     [self unpauseEverything];
-    [self showDistanceSprites];
+//    [self showDistanceSprites];
 }
 
 - (void) unpauseEverything
 {
     self.paused = NO;
     _characterNode.paused = NO;
-    _sharkNode.paused = NO;
+//    _sharkNode.paused = NO;
 }
 
 - (void) showDistanceSprites
 {
     _score.visible = YES;
+    _oxygenMeter.visible = YES;
+    
     _turtleReferencePosition.visible = YES;
     _sharkReferenceSprite.visible = YES;
 }
 
+#pragma mark Tutorial
 - (void) tutorial
 {
     
@@ -257,6 +251,7 @@ static BOOL hasGameBeenPlayed;
     
 }
 
+#pragma mark Level Loop
 - (void) loopLevel
 {
     for (ObstacleHolder *_level in _levelsGroup) {
@@ -274,32 +269,56 @@ static BOOL hasGameBeenPlayed;
     }
 }
 
-- (void) removeStarfish:(CCNode *)starfish
-{
-//    [[OALSimpleAudio sharedInstance] playEffect:@"GruntBirthdayParty.mp3"];
-    [starfish removeFromParent];
-}
-
+#pragma mark Game Over
 - (void) gameOverPopup
 {
+    self.paused = YES;
     hasGameBeenPlayed = YES;
+
+    _numberOfStarfish = [[NSUserDefaults standardUserDefaults] objectEncryptedForKey:@"EB4ZTSTnHS8726Y8"];
+    _numberOfStarfish = [NSNumber numberWithInt:[_numberOfStarfish intValue] + _starfishCollectedThisGame];
+    
+    [[NSUserDefaults standardUserDefaults] setObjectEncrypted:_numberOfStarfish forKey:@"EB4ZTSTnHS8726Y8"];
+
     GameOver *popup = (GameOver *)[CCBReader load:@"GameOver" owner:self];
     popup.positionType = CCPositionTypeNormalized;
     popup.position = ccp(0.5, 0.5);
     [self addChild:popup];
 }
 
+#pragma mark Oxygen Meters
+- (void) increaseOxygen
+{
+    _oxygenMeter.scaleY += 0.005;
+}
+
+- (void) decreaseOxygen
+{
+    _oxygenMeter.scaleY -= 0.002;
+}
+
+#pragma mark Score/Star Counter and  Star Removal
 - (void) scoreCounter
 {
-    _scoreNumber ++;
+    _scoreNumber = (_characterNode.position.x - 600) / 2;
     _score.string = [NSString stringWithFormat:@"%d", _scoreNumber];
 }
 
-//TODO: Add distance from shark
+- (void) starfishScore
+{
+    _numberOfStarsCollected.string = [NSString stringWithFormat:@"%i", _starfishCollectedThisGame];
+}
+
+- (void) removeStarfish:(CCNode *)starfish
+{
+//    [[OALSimpleAudio sharedInstance] playEffect:@"GruntBirthdayParty.mp3"];
+    [starfish removeFromParent];
+}
+
+#pragma mark Find Distance
 - (CGFloat) findDistance
 {
     return (_characterNode.position.x - _sharkNode.position.x) / 3;
-//    return  ccpDistance(_characterNode.position, _sharkNode.position) / 2;
 }
 
 - (void) setDistanceOfSharkAndTurtle
@@ -323,9 +342,20 @@ static BOOL hasGameBeenPlayed;
     }
     
     [self setDistanceOfSharkAndTurtle];
+    [self starfishScore];
     
     if (_characterNode.position.x > 600) {
         [self scoreCounter];
+        [self showDistanceSprites];
+        _sharkNode.paused = NO;
+    }
+    
+    if (_characterNode.position.y > 280 && _characterNode.position.x > 600 && _oxygenMeter.scaleY <= 1) {
+        [self increaseOxygen];
+    } else if (_characterNode.position.y < 280 && _characterNode.position.x > 600 && _oxygenMeter.scaleY > 0.002) {
+        [self decreaseOxygen];
+    } else if (_oxygenMeter.scaleY <= 0.002) {
+        [self gameOverPopup];
     }
     
     if (_characterNode.position.y > 300 && !_characterNode.crossedWater && _characterNode.reverseGravityTriggered) {
@@ -335,7 +365,6 @@ static BOOL hasGameBeenPlayed;
     }
     
     if (CGRectGetMinY(_characterNode.boundingBox) < CGRectGetMinY(_physicsNode.boundingBox)) {
-        self.paused = YES;
         [self gameOverPopup];
     }
 }

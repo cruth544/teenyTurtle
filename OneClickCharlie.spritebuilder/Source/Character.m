@@ -53,12 +53,11 @@ playerUpdateVelocity(cpBody *body, cpVect gravity, cpFloat damping, cpFloat dt)
     
     float distanceBelow = 300 - selfRef.position.y - selfRef.boundingBox.size.height / 2;
     distanceBelow = clampf(distanceBelow, 0, selfRef.boundingBox.size.height);
-    float forceValue = (distanceBelow / selfRef.boundingBox.size.height) * selfRef.waterBuoyancy.y;
+    float forceValue = (distanceBelow / selfRef.boundingBox.size.height) * selfRef.waterBuoyancy.y / 1.4;
     if (forceValue == 0) {
         forceValue -= body->v.y * 4;
     }
     forceValue -= body->v.y * 4;
-
     
     CGPoint appliedForce = CGPointMake(0, forceValue);
     if (selfRef.reverseGravityTriggered && selfRef.position.y < 300) {
@@ -133,7 +132,7 @@ playerUpdateVelocity(cpBody *body, cpVect gravity, cpFloat damping, cpFloat dt)
         
         float randomTeleportPoint = arc4random() % 72 + 72;
         
-        CCActionMoveBy *offsetPosition = [CCActionMoveBy actionWithDuration:0.f position:ccp(randomTeleportPoint, 0)];
+        CCActionMoveBy *offsetPosition = [CCActionMoveBy actionWithDuration:0.f position:ccp(randomTeleportPoint, .5)];
         CCActionSequence *teleportFadeIn = [CCActionSequence actions:fadeOut, offsetPosition, fadeIn, nil];
         
         [self runAction:teleportFadeIn];

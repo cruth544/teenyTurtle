@@ -64,7 +64,7 @@
 									<integer>7</integer>
 									<key>value</key>
 									<array>
-										<string>Turtle/TurtleWalk01.png</string>
+										<string>OldTurtle/TurtleWalk01.png</string>
 										<string>Use regular file</string>
 									</array>
 								</dict>
@@ -82,7 +82,7 @@
 									<integer>7</integer>
 									<key>value</key>
 									<array>
-										<string>Turtle/TurtleWalk02.png</string>
+										<string>OldTurtle/TurtleWalk02.png</string>
 										<string>Use regular file</string>
 									</array>
 								</dict>
@@ -100,7 +100,7 @@
 									<integer>7</integer>
 									<key>value</key>
 									<array>
-										<string>Turtle/TurtleWalk03.png</string>
+										<string>OldTurtle/TurtleWalk03.png</string>
 										<string>Use regular file</string>
 									</array>
 								</dict>
@@ -118,7 +118,7 @@
 									<integer>7</integer>
 									<key>value</key>
 									<array>
-										<string>Turtle/TurtleWalk04.png</string>
+										<string>OldTurtle/TurtleWalk04.png</string>
 										<string>Use regular file</string>
 									</array>
 								</dict>
@@ -136,7 +136,7 @@
 									<integer>7</integer>
 									<key>value</key>
 									<array>
-										<string>Turtle/TurtleWalk05.png</string>
+										<string>OldTurtle/TurtleWalk05.png</string>
 										<string>Use regular file</string>
 									</array>
 								</dict>
@@ -154,7 +154,7 @@
 									<integer>7</integer>
 									<key>value</key>
 									<array>
-										<string>Turtle/TurtleWalk06.png</string>
+										<string>OldTurtle/TurtleWalk06.png</string>
 										<string>Use regular file</string>
 									</array>
 								</dict>
@@ -239,7 +239,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Turtle/TurtleWalk01.png</string>
+							<string>OldTurtle/TurtleWalk06.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -414,8 +414,6 @@
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
