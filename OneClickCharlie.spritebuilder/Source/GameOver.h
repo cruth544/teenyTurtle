@@ -7,6 +7,8 @@
 //
 
 #import "GamePlayScene.h"
+#import <Social/Social.h>
+
 
 @interface GameOver : CCNode
 

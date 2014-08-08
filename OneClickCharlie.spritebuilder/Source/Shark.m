@@ -21,7 +21,7 @@
 {
     self = [super init];
     if (self) {
-        sharkSpeed = 100.f;
+        sharkSpeed = 80.f;
     }
     return self;
 }

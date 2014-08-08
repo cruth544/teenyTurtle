@@ -33,7 +33,7 @@ static BOOL hasGameBeenPlayed;
     CCNode *_turtleReferencePosition;
     CCSprite *_sharkReferenceSprite;
     
-    int _scoreNumber;
+    int _distanceNumber;
     CCLabelTTF *_score;
     
     CCNodeColor *_oxygenMeter;
@@ -54,7 +54,7 @@ static BOOL hasGameBeenPlayed;
     self = [super init];
     if (self) {
         _levelsGroup = [NSMutableArray array];
-        _scoreNumber = 0;
+        _distanceNumber = 0;
     }
     
     return self;
@@ -81,7 +81,7 @@ static BOOL hasGameBeenPlayed;
     _sharkNode.turtleTarget = _characterNode;
     [_physicsNode addChild:_sharkNode z:100];
     _sharkNode.physicsBody.collisionType = @"shark";
-    [_sharkNode setPosition:ccp(0, 0)];
+    [_sharkNode setPosition:ccp(600, -100)];
     _sharkNode.visible = NO;
     
     self.paused = YES;
@@ -92,8 +92,6 @@ static BOOL hasGameBeenPlayed;
     } else {
         self.paused = NO;
         _characterNode.paused = NO;
-//        _sharkNode.paused = NO;
-//        [self showDistanceSprites];
     }
     
     for (int i = 0; i < 5; i++) {
@@ -227,7 +225,6 @@ static BOOL hasGameBeenPlayed;
 {
     self.paused = NO;
     _characterNode.paused = NO;
-//    _sharkNode.paused = NO;
 }
 
 - (void) showDistanceSprites
@@ -294,14 +291,14 @@ static BOOL hasGameBeenPlayed;
 
 - (void) decreaseOxygen
 {
-    _oxygenMeter.scaleY -= 0.002;
+    _oxygenMeter.scaleY -= 0.001;
 }
 
 #pragma mark Score/Star Counter and  Star Removal
 - (void) scoreCounter
 {
-    _scoreNumber = (_characterNode.position.x - 600) / 2;
-    _score.string = [NSString stringWithFormat:@"%d", _scoreNumber];
+    _distanceNumber = (_characterNode.position.x - 600) / 2;
+    _score.string = [NSString stringWithFormat:@"%d", _distanceNumber];
 }
 
 - (void) starfishScore
@@ -337,6 +334,13 @@ static BOOL hasGameBeenPlayed;
             _characterNode.characterSpeed -= 1.f;
         } else {
             _characterNode.characterSpeed = 30.f;
+            _characterNode.didCollide = false;
+        }
+    } else if (_characterNode.position.y > 50 && _characterNode.position.y < 275) {
+        if (_characterNode.characterSpeed > 70) {
+            _characterNode.characterSpeed -= 1.f;
+        } else {
+            _characterNode.characterSpeed = 70.f;
             _characterNode.didCollide = false;
         }
     }
