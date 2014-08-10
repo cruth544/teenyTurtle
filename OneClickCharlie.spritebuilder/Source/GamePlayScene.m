@@ -75,7 +75,7 @@ static BOOL hasGameBeenPlayed;
     _characterNode = (Character *)[CCBReader load:@"Turtle"];
     [_physicsNode addChild:_characterNode z:99];
     _characterNode.physicsBody.collisionType = @"character";
-    [_characterNode setPosition:ccp(50, 36)];
+    [_characterNode setPosition:ccp(50, 18)];
     
     _sharkNode = (Shark *)[CCBReader load:@"Shark"];
     _sharkNode.turtleTarget = _characterNode;
@@ -218,7 +218,6 @@ static BOOL hasGameBeenPlayed;
     [_mainMenu removeFromParent];
     
     [self unpauseEverything];
-//    [self showDistanceSprites];
 }
 
 - (void) unpauseEverything
@@ -239,13 +238,11 @@ static BOOL hasGameBeenPlayed;
 #pragma mark Tutorial
 - (void) tutorial
 {
-    
 //    CCScene *tutorialPageScene = [[CCScene alloc] init];
 //    Tutorial *tutorialNode = (Tutorial *)[CCBReader load:[NSString stringWithFormat:@"Tutorials/Tutorial%i", _tutorialPage]];
 //    tutorialNode.tutorialPage = self.tutorialPage + 1;
 //    [tutorialPageScene addChild:tutorialNode];
 //    [[CCDirector sharedDirector] replaceScene:tutorialPageScene];
-    
 }
 
 #pragma mark Level Loop
@@ -278,6 +275,7 @@ static BOOL hasGameBeenPlayed;
     [[NSUserDefaults standardUserDefaults] setObjectEncrypted:_numberOfStarfish forKey:@"EB4ZTSTnHS8726Y8"];
 
     GameOver *popup = (GameOver *)[CCBReader load:@"GameOver" owner:self];
+    popup.distanceForGameOverMessage = _distanceNumber;
     popup.positionType = CCPositionTypeNormalized;
     popup.position = ccp(0.5, 0.5);
     [self addChild:popup];
@@ -298,7 +296,7 @@ static BOOL hasGameBeenPlayed;
 - (void) scoreCounter
 {
     _distanceNumber = (_characterNode.position.x - 600) / 2;
-    _score.string = [NSString stringWithFormat:@"%d", _distanceNumber];
+    _score.string = [NSString stringWithFormat:@"%dm", _distanceNumber];
 }
 
 - (void) starfishScore

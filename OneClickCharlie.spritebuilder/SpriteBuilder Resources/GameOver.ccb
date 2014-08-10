@@ -161,7 +161,7 @@
 								<string>String</string>
 								<key>value</key>
 								<array>
-									<string>Start Over</string>
+									<string>Try Again</string>
 									<false/>
 								</array>
 							</dict>
@@ -173,7 +173,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonNormal.png</string>
+									<string></string>
 								</array>
 							</dict>
 							<dict>
@@ -184,7 +184,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonHighlighted.png</string>
+									<string></string>
 								</array>
 							</dict>
 							<dict>
@@ -208,7 +208,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonNormal.png</string>
+									<string></string>
 								</array>
 							</dict>
 							<dict>
@@ -227,7 +227,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonNormal.png</string>
+									<string></string>
 								</array>
 							</dict>
 							<dict>
@@ -315,9 +315,9 @@
 								<string>Color4</string>
 								<key>value</key>
 								<array>
-									<real>1</real>
-									<real>0.42687791585922241</real>
-									<real>0.69767487049102783</real>
+									<real>0.0</real>
+									<real>0.0</real>
+									<real>0.0</real>
 									<real>1</real>
 								</array>
 							</dict>
@@ -339,10 +339,10 @@
 								<string>Color4</string>
 								<key>value</key>
 								<array>
-									<real>0.53899461030960083</real>
-									<real>0.014211861416697502</real>
-									<real>1</real>
-									<real>1</real>
+									<real>0.40000000596046448</real>
+									<real>0.40000000596046448</real>
+									<real>0.40000000596046448</real>
+									<real>0.0</real>
 								</array>
 							</dict>
 							<dict>
@@ -384,7 +384,7 @@
 						<key>displayName</key>
 						<string>CCLabelTTF</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>_gameOverMessage</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -442,7 +442,7 @@
 								<string>Text</string>
 								<key>value</key>
 								<array>
-									<string>You Lose</string>
+									<string>.</string>
 									<false/>
 								</array>
 							</dict>
@@ -492,7 +492,7 @@
 								<key>type</key>
 								<string>IntegerLabeled</string>
 								<key>value</key>
-								<integer>0</integer>
+								<integer>1</integer>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -509,9 +509,9 @@
 								<string>Color4</string>
 								<key>value</key>
 								<array>
-									<real>0.91479021310806274</real>
-									<real>0.0</real>
+									<real>0.40000000596046448</real>
 									<real>1</real>
+									<real>0.40000000596046448</real>
 									<real>1</real>
 								</array>
 							</dict>
@@ -522,9 +522,9 @@
 								<string>Color4</string>
 								<key>value</key>
 								<array>
-									<real>1</real>
-									<real>0.0</real>
-									<real>0.42670312523841858</real>
+									<real>0.098039217293262482</real>
+									<real>0.098039217293262482</real>
+									<real>0.098039217293262482</real>
 									<real>1</real>
 								</array>
 							</dict>
@@ -578,6 +578,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -611,7 +613,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.34999999403953552</real>
+									<real>0.40000000596046448</real>
 									<real>0.44999998807907104</real>
 									<integer>0</integer>
 									<integer>2</integer>
@@ -636,8 +638,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>1</real>
-									<real>1</real>
+									<real>0.30000001192092896</real>
+									<real>0.30000001192092896</real>
 									<false/>
 									<integer>0</integer>
 								</array>
@@ -660,8 +662,8 @@
 								<string>Size</string>
 								<key>value</key>
 								<array>
-									<real>40</real>
-									<real>40</real>
+									<real>75</real>
+									<real>75</real>
 									<integer>0</integer>
 									<integer>0</integer>
 								</array>
@@ -694,7 +696,7 @@
 								<string>String</string>
 								<key>value</key>
 								<array>
-									<string>Twttr</string>
+									<string></string>
 									<false/>
 								</array>
 							</dict>
@@ -706,7 +708,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonNormal.png</string>
+									<string>Social Logos/TwitterLogo.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -717,7 +719,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonHighlighted.png</string>
+									<string>Social Logos/TwitterLogo.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -741,7 +743,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonNormal.png</string>
+									<string>Social Logos/TwitterLogo.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -760,7 +762,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonNormal.png</string>
+									<string>Social Logos/TwitterLogo.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -937,7 +939,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.64999997615814209</real>
+									<real>0.60000002384185791</real>
 									<real>0.44999998807907104</real>
 									<integer>0</integer>
 									<integer>2</integer>
@@ -962,8 +964,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>1</real>
-									<real>1</real>
+									<real>0.30000001192092896</real>
+									<real>0.30000001192092896</real>
 									<false/>
 									<integer>0</integer>
 								</array>
@@ -975,7 +977,7 @@
 								<string>Block</string>
 								<key>value</key>
 								<array>
-									<string></string>
+									<string>showFacebookSheet</string>
 									<integer>1</integer>
 								</array>
 							</dict>
@@ -986,8 +988,8 @@
 								<string>Size</string>
 								<key>value</key>
 								<array>
-									<real>40</real>
-									<real>40</real>
+									<real>75</real>
+									<real>75</real>
 									<integer>0</integer>
 									<integer>0</integer>
 								</array>
@@ -1020,7 +1022,7 @@
 								<string>String</string>
 								<key>value</key>
 								<array>
-									<string>FB</string>
+									<string></string>
 									<false/>
 								</array>
 							</dict>
@@ -1032,7 +1034,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonNormal.png</string>
+									<string>Social Logos/FacebookLogo.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1043,7 +1045,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonHighlighted.png</string>
+									<string>Social Logos/FacebookLogo.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1067,7 +1069,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonNormal.png</string>
+									<string>Social Logos/FacebookLogo.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1086,7 +1088,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonNormal.png</string>
+									<string>Social Logos/FacebookLogo.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1309,7 +1311,7 @@
 						<key>value</key>
 						<array>
 							<real>0.0</real>
-							<real>0.91911506652832031</real>
+							<real>0.50196081399917603</real>
 							<real>1</real>
 							<real>0.75</real>
 						</array>

@@ -7,12 +7,13 @@
 //
 
 #import "GamePlayScene.h"
-#import <Social/Social.h>
 
 
 @interface GameOver : CCNode
 
 @property (nonatomic, assign) BOOL hasGameBeenPlayed;
+@property (nonatomic, assign) int distanceForGameOverMessage;
+
 
 - (void) restartGame;
 - (void) gameOverPopUp;
