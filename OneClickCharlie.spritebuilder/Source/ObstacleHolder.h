@@ -10,9 +10,10 @@
 
 @interface ObstacleHolder : GamePlayScene
 
-@property(nonatomic, strong)CCNode *obstacles;
+@property (nonatomic, strong) CCNode *obstacles;
+@property (nonatomic, assign) BOOL tutorialIsRunning;
 
 
--(void)reinitialize;
+- (void) reinitialize;
 
 @end

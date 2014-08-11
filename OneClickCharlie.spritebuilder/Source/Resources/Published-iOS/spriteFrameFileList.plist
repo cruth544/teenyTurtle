@@ -9,10 +9,12 @@
 	</dict>
 	<key>spriteFrameFiles</key>
 	<array>
-		<string>ArchitectureAssets.plist</string>
+		<string>Smaller PNGs.plist</string>
 		<string>TurtleResources.plist</string>
-		<string>Background.plist</string>
 		<string>Turtle.plist</string>
+		<string>ArchitectureAssets.plist</string>
+		<string>Social Logos.plist</string>
+		<string>Background.plist</string>
 	</array>
 </dict>
 </plist>

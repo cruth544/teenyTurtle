@@ -28,7 +28,7 @@
 {
     [super onEnter];
     CCLOG(@"Distance traveled for Game Over Message: %i", _distanceForGameOverMessage);
-    _gameOverMessage.string = [NSString stringWithFormat:@"You went %im\nbefore getting eaten!", _distanceForGameOverMessage];
+    _gameOverMessage.string = [NSString stringWithFormat:@"You went %im\nbefore dying!", _distanceForGameOverMessage];
 }
 
 - (void) restartGame

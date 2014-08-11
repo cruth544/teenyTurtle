@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>Smaller PNGs/Belly-Mod.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{230, 173}, {67, 18}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {67, 18}}</string>
+			<key>sourceSize</key>
+			<string>{67, 18}</string>
+		</dict>
+		<key>Smaller PNGs/Belly.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {153, 41}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {153, 41}}</string>
+			<key>sourceSize</key>
+			<string>{153, 41}</string>
+		</dict>
+		<key>Smaller PNGs/DistanceHead.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{155, 124}, {73, 119}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {73, 119}}</string>
+			<key>sourceSize</key>
+			<string>{74, 120}</string>
+		</dict>
+		<key>Smaller PNGs/Head-Mod.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{48, 146}, {55, 43}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {55, 43}}</string>
+			<key>sourceSize</key>
+			<string>{55, 43}</string>
+		</dict>
+		<key>Smaller PNGs/Head.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{156, 1}, {121, 95}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {121, 95}}</string>
+			<key>sourceSize</key>
+			<string>{121, 95}</string>
+		</dict>
+		<key>Smaller PNGs/Leg-Mod.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{230, 156}, {15, 20}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {15, 20}}</string>
+			<key>sourceSize</key>
+			<string>{15, 20}</string>
+		</dict>
+		<key>Smaller PNGs/Leg.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 216}, {34, 43}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {34, 43}}</string>
+			<key>sourceSize</key>
+			<string>{34, 44}</string>
+		</dict>
+		<key>Smaller PNGs/Shell-Mod.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 146}, {68, 45}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {68, 45}}</string>
+			<key>sourceSize</key>
+			<string>{68, 45}</string>
+		</dict>
+		<key>Smaller PNGs/Shell.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 44}, {152, 100}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {152, 100}}</string>
+			<key>sourceSize</key>
+			<string>{152, 100}</string>
+		</dict>
+		<key>Smaller PNGs/ShellMod2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{230, 124}, {30, 20}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {30, 20}}</string>
+			<key>sourceSize</key>
+			<string>{30, 20}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{256, 256}</string>
+		<key>textureFileName</key>
+		<string>Smaller PNGs.png</string>
+	</dict>
+</dict>
+</plist>

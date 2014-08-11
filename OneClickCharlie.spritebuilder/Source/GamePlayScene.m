@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "GamePlayScene.h"
+#import "GamePlaySceneProtected.h"
 #import "Character.h"
 #import "ObstacleHolder.h"
 #import "GameOver.h"
@@ -17,6 +17,7 @@
 
 
 static BOOL hasGameBeenPlayed;
+//TODO: finish Tutorial
 
 @implementation GamePlayScene
 {
@@ -24,6 +25,8 @@ static BOOL hasGameBeenPlayed;
 
     Character *_characterNode;
     Shark *_sharkNode;
+    BOOL _sharkHasLoaded;
+    
     Starfish *_starfishNode;
     
     int _starfishCollectedThisGame;
@@ -43,10 +46,9 @@ static BOOL hasGameBeenPlayed;
     GameOver *gameOverVar;
     
     NSMutableArray *_levelsGroup;
-    CCNode *_obstacles;
-    
-//TODO: finish Tutorial
-    BOOL _finishedTutorial;
+//    CCNode *_obstacles;
+    ObstacleHolder *obstacleHolderClassVar;
+    CCNode *_obstacleForTutorial;
 }
 
 - (instancetype)init
@@ -68,42 +70,29 @@ static BOOL hasGameBeenPlayed;
     //enabling userinteraction
     self.userInteractionEnabled = YES;
     
-    //adding level to gamePlayScene Node
-    CCNode *level = [CCBReader load:@"Levels/MainLevel"];
-    [_physicsNode addChild:level];
-    
-    _characterNode = (Character *)[CCBReader load:@"Turtle"];
-    [_physicsNode addChild:_characterNode z:99];
-    _characterNode.physicsBody.collisionType = @"character";
-    [_characterNode setPosition:ccp(50, 18)];
-    
-    _sharkNode = (Shark *)[CCBReader load:@"Shark"];
-    _sharkNode.turtleTarget = _characterNode;
-    [_physicsNode addChild:_sharkNode z:100];
-    _sharkNode.physicsBody.collisionType = @"shark";
-    [_sharkNode setPosition:ccp(600, -100)];
-    _sharkNode.visible = NO;
-    
-    self.paused = YES;
-    
-    if (!hasGameBeenPlayed) {
-        _mainMenu = [CCBReader load:@"MainMenu" owner:self];
-        [self addChild:_mainMenu];
+    if (runningTutorial) {
+        [self loadTutorial];
     } else {
-        self.paused = NO;
-        _characterNode.paused = NO;
-    }
-    
-    for (int i = 0; i < 5; i++) {
-        CCNode *looper = [CCBReader load:@"Levels/LoopingLevel"];
-        [_levelsGroup addObject:looper];
-        [_physicsNode addChild:looper];
-
-        if (i == 0) {
-            looper.position = ccp(648, 0);
+        
+        //adding level to gamePlayScene Node
+        CCNode *level = [CCBReader load:@"Levels/Beach"];
+        [_physicsNode addChild:level];
+        
+        [self loadTurtle];
+//        [self loadShark];
+//            _sharkNode.visible = NO;
+        
+        self.paused = YES;
+        
+        if (!hasGameBeenPlayed) {
+            _mainMenu = [CCBReader load:@"MainMenu" owner:self];
+            [self addChild:_mainMenu];
         } else {
-            looper.position = ccp(looper.contentSize.width * i + 648, 0);
+            self.paused = NO;
+            _characterNode.paused = NO;
         }
+        
+        [self loadLevel];
     }
     
     _physicsNode.collisionDelegate = self;
@@ -155,18 +144,22 @@ static BOOL hasGameBeenPlayed;
 
 - (void) forwardSwipeHandle:(UISwipeGestureRecognizer*)gestureRecognizer
 {
-    [_characterNode teleport];
-    _characterNode.didCollide = true;
+//    [_characterNode teleport];
+//    _characterNode.didCollide = true;
 }
 
 - (void) upwardSwipeHandle:(UISwipeGestureRecognizer*)gestureRecognizer
 {
-    [_characterNode upGravity];
+    if (!runningTutorial) {
+        [_characterNode upGravity];
+    }
 }
 
 - (void) downwardSwipeHandle:(UISwipeGestureRecognizer*)gestureRecognizer
 {
-    [_characterNode downGravity];
+    if (!runningTutorial) {
+        [_characterNode downGravity];
+    }
 }
 
 
@@ -212,6 +205,40 @@ static BOOL hasGameBeenPlayed;
 
 #pragma mark - Custom Methods
 
+#pragma mark Loading Methods
+- (void) loadTurtle
+{
+    _characterNode = (Character *)[CCBReader load:@"Turtle"];
+    [_physicsNode addChild:_characterNode z:99];
+    _characterNode.physicsBody.collisionType = @"character";
+    [_characterNode setPosition:ccp(50, 330)];
+}
+
+- (void) loadShark
+{
+    _sharkNode = (Shark *)[CCBReader load:@"Shark"];
+    _sharkNode.turtleTarget = _characterNode;
+    [_physicsNode addChild:_sharkNode z:100];
+    _sharkNode.physicsBody.collisionType = @"shark";
+    [_sharkNode setPosition:ccp(600, -100)];
+    _sharkHasLoaded = YES;
+}
+
+- (void) loadLevel
+{
+    for (int i = 0; i < 5; i++) {
+        CCNode *looper = [CCBReader load:@"Levels/LoopingLevel"];
+        [_levelsGroup addObject:looper];
+        [_physicsNode addChild:looper];
+        
+        if (i == 0) {
+            looper.position = ccp(648, 0);
+        } else {
+            looper.position = ccp(looper.contentSize.width * i + 648, 0);
+        }
+    }
+}
+
 #pragma mark Begining Methods
 - (void) startGame
 {
@@ -236,16 +263,53 @@ static BOOL hasGameBeenPlayed;
 }
 
 #pragma mark Tutorial
-- (void) tutorial
+
+- (void) startTutorial
 {
-//    CCScene *tutorialPageScene = [[CCScene alloc] init];
-//    Tutorial *tutorialNode = (Tutorial *)[CCBReader load:[NSString stringWithFormat:@"Tutorials/Tutorial%i", _tutorialPage]];
-//    tutorialNode.tutorialPage = self.tutorialPage + 1;
-//    [tutorialPageScene addChild:tutorialNode];
-//    [[CCDirector sharedDirector] replaceScene:tutorialPageScene];
+    runningTutorial = YES;
+    CCScene *startTutorial = [CCBReader loadAsScene:@"GamePlayScene"];
+    [[CCDirector sharedDirector] replaceScene:startTutorial];
+    [self loadTurtle];
+        [_characterNode setPosition:ccp(20, 18)];
 }
 
-#pragma mark Level Loop
+- (void) loadTutorial
+{
+    obstacleHolderClassVar.tutorialIsRunning = YES;
+    for (int i = 0; i < 12; i++) {
+        CCNode *looper = [CCBReader load:@"Levels/LevelForTutorial"];
+        [_levelsGroup addObject:looper];
+        [_physicsNode addChild:looper];
+        looper.position = ccp(looper.contentSize.width * i, 0);
+        
+        if (i <= 5 || i == 7 || i == 10) {
+            CCNode *addGap = [CCBReader load:@"Gap"];
+            [_obstacleForTutorial addChild:addGap];
+            [addGap setPosition:ccp(0, 0)];
+        } else if (i == 6) {
+            CCNode *addFirstWall = [CCBReader load:@"Wall"];
+            [_obstacleForTutorial addChild:addFirstWall];
+            CCNode *swipeUpGesture = [CCBReader load:@"Live Tutorial/TutorialSwipeUp"];
+            swipeUpGesture.position = ccp(looper.contentSize.width * 5, 0);
+        } else if (i == 8) {
+            CCNode *addSecondWall = [CCBReader load:@"Wall"];
+            [_obstacleForTutorial addChild:addSecondWall];
+            [addSecondWall setPosition:ccp(0, 200)];
+            CCNode *swipeUpGesture = [CCBReader load:@"Live Tutorial/TutorialSwipeUp"];
+            swipeUpGesture.position = ccp(looper.contentSize.width * 5, 0);
+        } else if (i == 9) {
+            CCNode *addClam = [CCBReader load:@"Clam"];
+            [_obstacleForTutorial addChild:addClam];
+        } else if (i == 11) {
+            CCNode *wallForSharkAttack = [CCBReader load:@"Wall"];
+            [_obstacleForTutorial addChild:wallForSharkAttack];
+        }
+    }
+}
+
+#pragma mark Levels
+
+
 - (void) loopLevel
 {
     for (ObstacleHolder *_level in _levelsGroup) {
@@ -325,49 +389,58 @@ static BOOL hasGameBeenPlayed;
 
 - (void) update:(CCTime)delta
 {
-    [self loopLevel];
+    if (runningTutorial) {
+        
+    } else {
     
-    if (_characterNode.position.y > 275) {
-        if (_characterNode.characterSpeed > 30.f) {
-            _characterNode.characterSpeed -= 1.f;
-        } else {
-            _characterNode.characterSpeed = 30.f;
-            _characterNode.didCollide = false;
+        [self loopLevel];
+
+        if (_characterNode.position.y > 275 && _characterNode.position.x > 600) {
+            if (_characterNode.characterSpeed > 30.f) {
+                _characterNode.characterSpeed -= 1.f;
+            } else {
+                _characterNode.characterSpeed = 30.f;
+                _characterNode.didCollide = false;
+            }
+        } else if (_characterNode.position.y > 50 && _characterNode.position.y < 275) {
+            if (_characterNode.characterSpeed > 70) {
+                _characterNode.characterSpeed -= 1.f;
+            } else {
+                _characterNode.characterSpeed = 70.f;
+                _characterNode.didCollide = false;
+            }
         }
-    } else if (_characterNode.position.y > 50 && _characterNode.position.y < 275) {
-        if (_characterNode.characterSpeed > 70) {
-            _characterNode.characterSpeed -= 1.f;
-        } else {
-            _characterNode.characterSpeed = 70.f;
-            _characterNode.didCollide = false;
+        
+        [self setDistanceOfSharkAndTurtle];
+        [self starfishScore];
+        
+        if (_characterNode.position.x > 600) {
+            [self scoreCounter];
+            [self showDistanceSprites];
+            _sharkNode.paused = NO;
         }
-    }
-    
-    [self setDistanceOfSharkAndTurtle];
-    [self starfishScore];
-    
-    if (_characterNode.position.x > 600) {
-        [self scoreCounter];
-        [self showDistanceSprites];
-        _sharkNode.paused = NO;
-    }
-    
-    if (_characterNode.position.y > 280 && _characterNode.position.x > 600 && _oxygenMeter.scaleY <= 1) {
-        [self increaseOxygen];
-    } else if (_characterNode.position.y < 280 && _characterNode.position.x > 600 && _oxygenMeter.scaleY > 0.002) {
-        [self decreaseOxygen];
-    } else if (_oxygenMeter.scaleY <= 0.002) {
-        [self gameOverPopup];
-    }
-    
-    if (_characterNode.position.y > 300 && !_characterNode.crossedWater && _characterNode.reverseGravityTriggered) {
-        [_characterNode outOfWaterGravity];
-    } else if (_characterNode.position.y < 300 && _characterNode.crossedWater) {
-        [_characterNode outOfWaterGravity];
-    }
-    
-    if (CGRectGetMinY(_characterNode.boundingBox) < CGRectGetMinY(_physicsNode.boundingBox)) {
-        [self gameOverPopup];
+        
+        if (_characterNode.position.x > 600 && !_sharkHasLoaded) {
+            [self loadShark];
+        }
+        
+        if (_characterNode.position.y > 280 && _characterNode.position.x > 600 && _oxygenMeter.scaleY <= 1) {
+            [self increaseOxygen];
+        } else if (_characterNode.position.y < 280 && _characterNode.position.x > 600 && _oxygenMeter.scaleY > 0.002) {
+            [self decreaseOxygen];
+        } else if (_oxygenMeter.scaleY <= 0.002) {
+            [self gameOverPopup];
+        }
+        
+        if (_characterNode.position.y > 300 && !_characterNode.crossedWater && _characterNode.reverseGravityTriggered) {
+            [_characterNode outOfWaterGravity];
+        } else if (_characterNode.position.y < 300 && _characterNode.crossedWater) {
+            [_characterNode outOfWaterGravity];
+        }
+        
+        if (CGRectGetMinY(_characterNode.boundingBox) < CGRectGetMinY(_physicsNode.boundingBox)) {
+            [self gameOverPopup];
+        }
     }
 }
 

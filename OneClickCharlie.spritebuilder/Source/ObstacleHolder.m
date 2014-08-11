@@ -28,7 +28,9 @@
 
 - (void)didLoadFromCCB
 {
-    [self reinitialize];
+    if (!_tutorialIsRunning) {
+        [self reinitialize];
+    }
 }
 
 - (void) reinitialize
@@ -49,7 +51,7 @@
         CCNode *wallObstacle = [CCBReader load:@"Wall"];
         [_obstacles addChild:wallObstacle z:1];
         
-        float rotationAmount = arc4random()%30 + arc4random()%100 / 100;
+        float rotationAmount = arc4random()%24 + arc4random()%100 / 100;
         CCLOG(@"Rotation Amount: %f", rotationAmount);
         wallObstacle.physicsBody.collisionType = @"wall";
         [addGap setPosition:ccp(0, 0)];
