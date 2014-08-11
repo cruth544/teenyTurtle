@@ -10,4 +10,10 @@
 
 @implementation TutorialLive
 
+
+- (void) didLoadFromCCB
+{
+    runningTutorial = YES;
+}
+
 @end

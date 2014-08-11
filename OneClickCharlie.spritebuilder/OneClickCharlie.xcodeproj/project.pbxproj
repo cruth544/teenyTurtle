@@ -167,6 +167,7 @@
 		8411E8DE19805BBB00D7DD86 /* ObstacleHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObstacleHolder.m; path = Source/ObstacleHolder.m; sourceTree = "<group>"; };
 		8411E8E5198181D700D7DD86 /* Tutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tutorial.h; path = Source/Tutorial.h; sourceTree = "<group>"; };
 		8411E8E6198181D700D7DD86 /* Tutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tutorial.m; path = Source/Tutorial.m; sourceTree = "<group>"; };
+		84B77B2819997840006BCC20 /* GamePlaySceneProtectedVar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GamePlaySceneProtectedVar.h; path = Source/GamePlaySceneProtectedVar.h; sourceTree = "<group>"; };
 		84C1244B1991544C0060D48C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		84C1244D199154530060D48C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		84C1244F1991545F0060D48C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -468,6 +469,7 @@
 				84D7CBE7198C1FFD00301BB5 /* TutorialLive.m */,
 				8411E8DB19805BBB00D7DD86 /* GamePlayScene.h */,
 				8411E8DC19805BBB00D7DD86 /* GamePlayScene.m */,
+				84B77B2819997840006BCC20 /* GamePlaySceneProtectedVar.h */,
 				B737893D1807617C0076A88C /* AppDelegate.h */,
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 			);

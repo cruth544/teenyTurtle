@@ -6,14 +6,13 @@
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "GamePlayScene.h"
+#import "GamePlaySceneProtectedVar.h"
 #import "Character.h"
 #import "ObstacleHolder.h"
 #import "GameOver.h"
 #import "Shark.h"
 #import "Starfish.h"
 #import "NSUserDefaults+Encryption.h"
-
 
 
 static BOOL hasGameBeenPlayed;
@@ -72,15 +71,9 @@ static BOOL hasGameBeenPlayed;
     CCNode *level = [CCBReader load:@"Levels/MainLevel"];
     [_physicsNode addChild:level];
     
-    _characterNode = (Character *)[CCBReader load:@"Turtle"];
-    [_physicsNode addChild:_characterNode z:99];
-    _characterNode.physicsBody.collisionType = @"character";
-    [_characterNode setPosition:ccp(50, 18)];
+    [self loadTurtle];
     
-    _sharkNode = (Shark *)[CCBReader load:@"Shark"];
-    _sharkNode.turtleTarget = _characterNode;
-    [_physicsNode addChild:_sharkNode z:100];
-    _sharkNode.physicsBody.collisionType = @"shark";
+    [self loadShark];
     [_sharkNode setPosition:ccp(600, -100)];
     _sharkNode.visible = NO;
     
@@ -218,6 +211,22 @@ static BOOL hasGameBeenPlayed;
     [_mainMenu removeFromParent];
     
     [self unpauseEverything];
+}
+
+- (void) loadShark
+{
+    _sharkNode = (Shark *)[CCBReader load:@"Shark"];
+    _sharkNode.turtleTarget = _characterNode;
+    [_physicsNode addChild:_sharkNode z:100];
+    _sharkNode.physicsBody.collisionType = @"shark";
+}
+
+- (void) loadTurtle
+{
+    _characterNode = (Character *)[CCBReader load:@"Turtle"];
+    [_physicsNode addChild:_characterNode z:99];
+    _characterNode.physicsBody.collisionType = @"character";
+    [_characterNode setPosition:ccp(50, 18)];
 }
 
 - (void) unpauseEverything

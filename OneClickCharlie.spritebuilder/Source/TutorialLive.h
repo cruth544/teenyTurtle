@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "GamePlayScene.h"
+#import "GamePlaySceneProtectedVar.h"
 
 @interface TutorialLive : GamePlayScene
 
