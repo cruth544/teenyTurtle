@@ -211,7 +211,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
+							<real>-1</real>
 							<real>285</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -225,7 +225,7 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
+							<real>0.0</real>
 							<real>0.5</real>
 						</array>
 					</dict>
@@ -236,7 +236,7 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>100</real>
+							<real>1</real>
 							<real>1</real>
 							<false/>
 							<integer>0</integer>
@@ -250,7 +250,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ArchitectureAssets/flagBlue2.png</string>
+							<string>Level Art/WaterLine.png</string>
 						</array>
 					</dict>
 					<dict>

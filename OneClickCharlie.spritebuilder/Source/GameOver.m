@@ -28,7 +28,7 @@
 {
     [super onEnter];
     CCLOG(@"Distance traveled for Game Over Message: %i", _distanceForGameOverMessage);
-    _gameOverMessage.string = [NSString stringWithFormat:@"You went %im\nbefore getting eaten!", _distanceForGameOverMessage];
+    _gameOverMessage.string = [NSString stringWithFormat:@"You went %im\nbefore getting dying!", _distanceForGameOverMessage];
 }
 
 - (void) restartGame
@@ -61,7 +61,7 @@
     };
     
     //  Set the initial body of the Tweet
-    [tweetSheet setInitialText:[NSString stringWithFormat:@"Chad's game is dope!!! I went %im before being eaten! @idontknow544", _distanceForGameOverMessage]];
+    [tweetSheet setInitialText:[NSString stringWithFormat:@"This game is dope!!! I went %im before dying! @idontknow544", _distanceForGameOverMessage]];
     
     //  Adds an image to the Tweet.  For demo purposes, assume we have an
     //  image named 'larry.png' that we wish to attach
@@ -98,7 +98,7 @@
     };
     
     //  Set the initial body of the Tweet
-    [facebookSheet setInitialText:[NSString stringWithFormat:@"Chad's game is dope!!! I went %im before being eaten! @Chad Rutherford", _distanceForGameOverMessage]];
+    [facebookSheet setInitialText:[NSString stringWithFormat:@"This game is dope!!! I went %im before dying! @Chad Rutherford", _distanceForGameOverMessage]];
     
     //  Adds an image to the Tweet.  For demo purposes, assume we have an
     //  image named 'larry.png' that we wish to attach

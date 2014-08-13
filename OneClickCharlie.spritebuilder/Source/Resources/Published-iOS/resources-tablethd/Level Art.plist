@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>Level Art/Beach.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {3678, 1323}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 1}, {3678, 1323}}</string>
+			<key>sourceSize</key>
+			<string>{3680, 1324}</string>
+		</dict>
+		<key>Level Art/WaterLine.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3681, 1}, {585, 39}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 2}, {585, 39}}</string>
+			<key>sourceSize</key>
+			<string>{588, 44}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{4096, 4096}</string>
+		<key>textureFileName</key>
+		<string>Level Art.png</string>
+	</dict>
+</dict>
+</plist>

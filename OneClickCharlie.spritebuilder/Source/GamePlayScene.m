@@ -7,8 +7,9 @@
 //
 
 #import "GamePlaySceneProtectedVar.h"
+//#import "GamePlayScene.h"
+//#import "ObstacleHolder.h"
 #import "Character.h"
-#import "ObstacleHolder.h"
 #import "GameOver.h"
 #import "Shark.h"
 #import "Starfish.h"
@@ -19,7 +20,7 @@ static BOOL hasGameBeenPlayed;
 
 @implementation GamePlayScene
 {
-    CCPhysicsNode *_physicsNode;
+//    CCPhysicsNode *_physicsNode;
 
     Character *_characterNode;
     Shark *_sharkNode;
@@ -41,14 +42,14 @@ static BOOL hasGameBeenPlayed;
     
     GameOver *gameOverVar;
     
-    NSMutableArray *_levelsGroup;
     CCNode *_obstacles;
+//    NSMutableArray *_levelsGroup;
     
 //TODO: finish Tutorial
     BOOL _finishedTutorial;
 }
 
-- (instancetype)init
+- (instancetype) init
 {
     self = [super init];
     if (self) {
@@ -66,36 +67,44 @@ static BOOL hasGameBeenPlayed;
 {
     //enabling userinteraction
     self.userInteractionEnabled = YES;
+    self.physicsNode.debugDraw = YES;
     
-    //adding level to gamePlayScene Node
-    CCNode *level = [CCBReader load:@"Levels/MainLevel"];
-    [_physicsNode addChild:level];
-    
-    [self loadTurtle];
-    
-    [self loadShark];
-    [_sharkNode setPosition:ccp(600, -100)];
-    _sharkNode.visible = NO;
-    
-    self.paused = YES;
-    
-    if (!hasGameBeenPlayed) {
-        _mainMenu = [CCBReader load:@"MainMenu" owner:self];
-        [self addChild:_mainMenu];
+    if (runningTutorial) {
+        CCNode *tutorialLevel = [CCBReader load:@"Levels/LoopingLevelForTutorial"];
+        [_physicsNode addChild:tutorialLevel];
     } else {
-        self.paused = NO;
-        _characterNode.paused = NO;
-    }
     
-    for (int i = 0; i < 5; i++) {
-        CCNode *looper = [CCBReader load:@"Levels/LoopingLevel"];
-        [_levelsGroup addObject:looper];
-        [_physicsNode addChild:looper];
+        //adding level to gamePlayScene Node
+        CCNode *level = [CCBReader load:@"Levels/Beach"];
+        [_physicsNode addChild:level];
+        
+        [self loadTurtle];
+            [_characterNode setPosition:ccp(50, 330)];
 
-        if (i == 0) {
-            looper.position = ccp(648, 0);
+        [self loadShark];
+        [_sharkNode setPosition:ccp(600, -100)];
+        _sharkNode.visible = NO;
+        
+        self.paused = YES;
+        
+        if (!hasGameBeenPlayed) {
+            _mainMenu = [CCBReader load:@"MainMenu" owner:self];
+            [self addChild:_mainMenu];
         } else {
-            looper.position = ccp(looper.contentSize.width * i + 648, 0);
+            self.paused = NO;
+            _characterNode.paused = NO;
+        }
+        
+        for (int i = 0; i < 5; i++) {
+            ObstacleHolder *looper = (ObstacleHolder *)[CCBReader load:@"Levels/LoopingLevel"];
+            [_levelsGroup addObject:looper];
+            [_physicsNode addChild:looper];
+
+            if (i == 0) {
+                looper.position = ccp(648 + 144, 0);
+            } else {
+                looper.position = ccp(looper.contentSize.width * i + 648 + 144, 0);
+            }
         }
     }
     
@@ -148,8 +157,8 @@ static BOOL hasGameBeenPlayed;
 
 - (void) forwardSwipeHandle:(UISwipeGestureRecognizer*)gestureRecognizer
 {
-    [_characterNode teleport];
-    _characterNode.didCollide = true;
+//    [_characterNode teleport];
+//    _characterNode.didCollide = true;
 }
 
 - (void) upwardSwipeHandle:(UISwipeGestureRecognizer*)gestureRecognizer
@@ -209,7 +218,6 @@ static BOOL hasGameBeenPlayed;
 - (void) startGame
 {
     [_mainMenu removeFromParent];
-    
     [self unpauseEverything];
 }
 
@@ -226,7 +234,7 @@ static BOOL hasGameBeenPlayed;
     _characterNode = (Character *)[CCBReader load:@"Turtle"];
     [_physicsNode addChild:_characterNode z:99];
     _characterNode.physicsBody.collisionType = @"character";
-    [_characterNode setPosition:ccp(50, 18)];
+//    [_characterNode setPosition:ccp(50, 18)];
 }
 
 - (void) unpauseEverything
@@ -245,13 +253,11 @@ static BOOL hasGameBeenPlayed;
 }
 
 #pragma mark Tutorial
-- (void) tutorial
+- (void) startTutorial
 {
-//    CCScene *tutorialPageScene = [[CCScene alloc] init];
-//    Tutorial *tutorialNode = (Tutorial *)[CCBReader load:[NSString stringWithFormat:@"Tutorials/Tutorial%i", _tutorialPage]];
-//    tutorialNode.tutorialPage = self.tutorialPage + 1;
-//    [tutorialPageScene addChild:tutorialNode];
-//    [[CCDirector sharedDirector] replaceScene:tutorialPageScene];
+    runningTutorial = YES;
+    CCScene *reloadGamePlayScene = [CCBReader loadAsScene:@"GamePlayScene"];
+    [[CCDirector sharedDirector] replaceScene:reloadGamePlayScene];
 }
 
 #pragma mark Level Loop
@@ -336,7 +342,7 @@ static BOOL hasGameBeenPlayed;
 {
     [self loopLevel];
     
-    if (_characterNode.position.y > 275) {
+    if (_characterNode.position.y > 275 && _characterNode.position.x > 600) {
         if (_characterNode.characterSpeed > 30.f) {
             _characterNode.characterSpeed -= 1.f;
         } else {
@@ -344,7 +350,7 @@ static BOOL hasGameBeenPlayed;
             _characterNode.didCollide = false;
         }
     } else if (_characterNode.position.y > 50 && _characterNode.position.y < 275) {
-        if (_characterNode.characterSpeed > 70) {
+        if (_characterNode.characterSpeed > 75) {
             _characterNode.characterSpeed -= 1.f;
         } else {
             _characterNode.characterSpeed = 70.f;

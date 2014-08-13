@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>Social Logos/FacebookLogo.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {301, 301}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {301, 301}}</string>
+			<key>sourceSize</key>
+			<string>{301, 301}</string>
+		</dict>
+		<key>Social Logos/TwitterLogo.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 304}, {300, 300}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {300, 300}}</string>
+			<key>sourceSize</key>
+			<string>{300, 300}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{1024, 1024}</string>
+		<key>textureFileName</key>
+		<string>Social Logos.png</string>
+	</dict>
+</dict>
+</plist>

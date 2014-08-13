@@ -1,5 +1,5 @@
 //
-//  Header.h
+//  GamePL.h
 //  OneClickCharlie
 //
 //  Created by Chad Rutherford on 8/11/14.
@@ -7,10 +7,14 @@
 //
 
 #import "GamePlayScene.h"
+#import "ObstacleHolder.h"
 
 static BOOL runningTutorial;
 
 @interface GamePlayScene()
+
+@property (nonatomic, strong) CCPhysicsNode *physicsNode;
+@property (nonatomic, strong) NSMutableArray *levelsGroup;
 
 
 

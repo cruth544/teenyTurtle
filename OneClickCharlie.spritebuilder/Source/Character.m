@@ -18,12 +18,11 @@ static float characterPosition;
     BOOL _teleportCD;
 }
 
-
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _characterSpeed = 100.f;
+        _characterSpeed = 95.f;
         _waterBuoyancy = CGPointMake(0, 2000);
     }
     return self;
