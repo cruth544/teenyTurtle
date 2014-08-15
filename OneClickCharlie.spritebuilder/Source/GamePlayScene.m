@@ -35,6 +35,7 @@ static BOOL hasGameBeenPlayed;
     
     int _distanceNumber;
     CCLabelTTF *_score;
+    NSNumber *_highScore;
     
     CCNodeColor *_oxygenMeter;
     
@@ -47,6 +48,8 @@ static BOOL hasGameBeenPlayed;
     
 //TODO: finish Tutorial
     BOOL _finishedTutorial;
+    
+    CCNodeColor *_overTurtle;
 }
 
 - (instancetype) init
@@ -67,20 +70,18 @@ static BOOL hasGameBeenPlayed;
 {
     //enabling userinteraction
     self.userInteractionEnabled = YES;
-    self.physicsNode.debugDraw = YES;
+//    self.physicsNode.debugDraw = YES;
     
-    if (runningTutorial) {
-        CCNode *tutorialLevel = [CCBReader load:@"Levels/LoopingLevelForTutorial"];
-        [_physicsNode addChild:tutorialLevel];
-    } else {
-    
+    if (runningTutorial == 0) {
+        
         //adding level to gamePlayScene Node
-        CCNode *level = [CCBReader load:@"Levels/Beach"];
+        CCNode *level = [CCBReader load:@"Levels/Beach" owner:self];
         [_physicsNode addChild:level];
         
         [self loadTurtle];
-            [_characterNode setPosition:ccp(50, 330)];
-
+        [_characterNode setPosition:ccp(50, 335)];
+        [_overTurtle setZOrder:1000];
+        
         [self loadShark];
         [_sharkNode setPosition:ccp(600, -100)];
         _sharkNode.visible = NO;
@@ -95,17 +96,23 @@ static BOOL hasGameBeenPlayed;
             _characterNode.paused = NO;
         }
         
+        [_physicsNode setPosition:ccp(0, -160)];
+        
         for (int i = 0; i < 5; i++) {
             ObstacleHolder *looper = (ObstacleHolder *)[CCBReader load:@"Levels/LoopingLevel"];
             [_levelsGroup addObject:looper];
             [_physicsNode addChild:looper];
-
+            
             if (i == 0) {
                 looper.position = ccp(648 + 144, 0);
             } else {
                 looper.position = ccp(looper.contentSize.width * i + 648 + 144, 0);
             }
         }
+
+    } else  if (runningTutorial == 1){
+        CCNode *tutorialLevel = [CCBReader load:@"Levels/LoopingLevelForTutorial"];
+        [_physicsNode addChild:tutorialLevel];
     }
     
     _physicsNode.collisionDelegate = self;
@@ -135,7 +142,7 @@ static BOOL hasGameBeenPlayed;
     CCActionFollow *follow = [CCActionFollow actionWithTarget:_characterNode worldBoundary:CGRectMake(0.f, 0.f, CGFLOAT_MAX, width)];
     [_physicsNode runAction:follow];
     
-    [[NSUserDefaults standardUserDefaults] setEncryptionKey:@"myencryptionkey!"];
+//    [[NSUserDefaults standardUserDefaults] setEncryptionKey:@"EB4ZTSTnHS8726Y8"];
 }
 
 
@@ -234,7 +241,8 @@ static BOOL hasGameBeenPlayed;
     _characterNode = (Character *)[CCBReader load:@"Turtle"];
     [_physicsNode addChild:_characterNode z:99];
     _characterNode.physicsBody.collisionType = @"character";
-//    [_characterNode setPosition:ccp(50, 18)];
+    [_overTurtle removeFromParentAndCleanup:NO] ;
+    [_physicsNode addChild:_overTurtle z:1000];
 }
 
 - (void) unpauseEverything
@@ -255,7 +263,7 @@ static BOOL hasGameBeenPlayed;
 #pragma mark Tutorial
 - (void) startTutorial
 {
-    runningTutorial = YES;
+    runningTutorial = 1;
     CCScene *reloadGamePlayScene = [CCBReader loadAsScene:@"GamePlayScene"];
     [[CCDirector sharedDirector] replaceScene:reloadGamePlayScene];
 }
@@ -284,10 +292,14 @@ static BOOL hasGameBeenPlayed;
     self.paused = YES;
     hasGameBeenPlayed = YES;
 
-    _numberOfStarfish = [[NSUserDefaults standardUserDefaults] objectEncryptedForKey:@"EB4ZTSTnHS8726Y8"];
-    _numberOfStarfish = [NSNumber numberWithInt:[_numberOfStarfish intValue] + _starfishCollectedThisGame];
+    _highScore = [[NSUserDefaults standardUserDefaults] objectEncryptedForKey:@"EB4ZTSTnHS8726Y8"];
+    if ([NSNumber numberWithInt:_distanceNumber] > _highScore) {
+        _highScore = [NSNumber numberWithInt:_distanceNumber];
+    }
     
-    [[NSUserDefaults standardUserDefaults] setObjectEncrypted:_numberOfStarfish forKey:@"EB4ZTSTnHS8726Y8"];
+    _highScore = [NSNumber numberWithInt:_distanceNumber];
+    
+    [[NSUserDefaults standardUserDefaults] setObjectEncrypted:_highScore forKey:@"EB4ZTSTnHS8726Y8"];
 
     GameOver *popup = (GameOver *)[CCBReader load:@"GameOver" owner:self];
     popup.distanceForGameOverMessage = _distanceNumber;

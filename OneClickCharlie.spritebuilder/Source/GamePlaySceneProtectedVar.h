@@ -9,7 +9,7 @@
 #import "GamePlayScene.h"
 #import "ObstacleHolder.h"
 
-static BOOL runningTutorial;
+static int runningTutorial;
 
 @interface GamePlayScene()
 

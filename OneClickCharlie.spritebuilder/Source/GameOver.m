@@ -8,11 +8,14 @@
 
 #import "GameOver.h"
 #import <Social/Social.h>
+#import "NSUserDefaults+Encryption.h"
+
 
 
 @implementation GameOver
 {
     CCLabelTTF *_gameOverMessage;
+    CCLabelTTF *_bestScore;
 }
 
 - (instancetype)init
@@ -28,7 +31,9 @@
 {
     [super onEnter];
     CCLOG(@"Distance traveled for Game Over Message: %i", _distanceForGameOverMessage);
-    _gameOverMessage.string = [NSString stringWithFormat:@"You went %im\nbefore getting dying!", _distanceForGameOverMessage];
+    _gameOverMessage.string = [NSString stringWithFormat:@"You went %im\nbefore dying!", _distanceForGameOverMessage];
+    NSNumber *highScoreDisplayedForGameOver = [[NSUserDefaults standardUserDefaults] objectEncryptedForKey:@"EB4ZTSTnHS8726Y8"];
+    _bestScore.string = [NSString stringWithFormat:@"Best: %@", highScoreDisplayedForGameOver];
 }
 
 - (void) restartGame

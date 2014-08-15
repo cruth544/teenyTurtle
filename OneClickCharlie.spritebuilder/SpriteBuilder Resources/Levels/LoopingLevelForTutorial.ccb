@@ -270,7 +270,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>TutorialLive</string>
+		<string></string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>

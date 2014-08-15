@@ -15,6 +15,7 @@
 
 - (void) didLoadFromCCB
 {
+    runningTutorial = 3;
     [self loadLargeTutorial];
 }
 
@@ -22,6 +23,7 @@
 {
     CCNode *largeTutorialLevel = [CCBReader load:@"Levels/TutorialLevel"];
     [self.physicsNode addChild:largeTutorialLevel];
+    runningTutorial = 0;
 }
 
 - (void) loadTutorial

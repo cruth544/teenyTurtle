@@ -9,12 +9,18 @@
 	</dict>
 	<key>spriteFrameFiles</key>
 	<array>
-		<string>Social Logos.plist</string>
-		<string>Level Art.plist</string>
-		<string>TurtleResources.plist</string>
-		<string>Turtle.plist</string>
-		<string>Smaller PNGs.plist</string>
 		<string>Background.plist</string>
+		<string>Smaller PNGs.plist</string>
+		<string>TurtleResources.plist</string>
+		<string>Social Logos.plist</string>
+		<string>BeachLevel.plist</string>
+		<string>Turtle.plist</string>
+		<string>Tentacles.plist</string>
+		<string>Poof.plist</string>
+		<string>Level Art.plist</string>
+		<string>ClamArt.plist</string>
+		<string>JellyfishEyes.plist</string>
+		<string>JellyfishArt.plist</string>
 		<string>ArchitectureAssets.plist</string>
 	</array>
 </dict>

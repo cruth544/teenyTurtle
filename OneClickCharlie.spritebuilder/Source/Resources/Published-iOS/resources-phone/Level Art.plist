@@ -4,23 +4,101 @@
 <dict>
 	<key>frames</key>
 	<dict>
+		<key>Level Art/Background.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 334}, {595, 717}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {595, 717}}</string>
+			<key>sourceSize</key>
+			<string>{596, 718}</string>
+		</dict>
 		<key>Level Art/Beach.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 1}, {920, 331}}</string>
+			<string>{{1, 1}, {926, 331}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceColorRect</key>
-			<string>{{0, 0}, {920, 331}}</string>
+			<string>{{0, 0}, {926, 331}}</string>
 			<key>sourceSize</key>
-			<string>{920, 331}</string>
+			<string>{926, 331}</string>
+		</dict>
+		<key>Level Art/Gap.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{929, 26}, {43, 23}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {43, 23}}</string>
+			<key>sourceSize</key>
+			<string>{43, 23}</string>
+		</dict>
+		<key>Level Art/Gap1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{929, 1}, {77, 23}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {77, 23}}</string>
+			<key>sourceSize</key>
+			<string>{77, 23}</string>
+		</dict>
+		<key>Level Art/Ground.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{999, 150}, {148, 23}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {148, 23}}</string>
+			<key>sourceSize</key>
+			<string>{148, 23}</string>
+		</dict>
+		<key>Level Art/Ground1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{974, 26}, {182, 23}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {182, 23}}</string>
+			<key>sourceSize</key>
+			<string>{182, 23}</string>
+		</dict>
+		<key>Level Art/SelfBackground.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{720, 334}, {144, 282}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {144, 282}}</string>
+			<key>sourceSize</key>
+			<string>{144, 282}</string>
 		</dict>
 		<key>Level Art/WaterLine.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{923, 1}, {147, 11}}</string>
+			<string>{{1008, 1}, {147, 11}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -29,6 +107,19 @@
 			<string>{{0, 0}, {147, 11}}</string>
 			<key>sourceSize</key>
 			<string>{147, 11}</string>
+		</dict>
+		<key>Level Art/WaterLine1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{929, 51}, {148, 10}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {148, 10}}</string>
+			<key>sourceSize</key>
+			<string>{148, 10}</string>
 		</dict>
 	</dict>
 	<key>metadata</key>

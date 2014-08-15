@@ -15,6 +15,7 @@
 @property (nonatomic, assign) int distanceForGameOverMessage;
 
 
+
 - (void) restartGame;
 - (void) gameOverPopUp;
 

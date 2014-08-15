@@ -578,7 +578,7 @@ NSString *  kRestrictedProperties[3] = { @"scale", @"scaleX", @"scaleY"};
             }
 
             //There are several properties on a physics body that cannot be changed after on enter (eg scale). Scaleing the parent of a physics body will fail as well, at least until the CCPhysicsNode parent.
-            NSAssert(![kRestrictedProperties[i] isEqualToString:keyPath], @"Property '%@' cannot be changed on a physics body or one of its parents after onEnter.",keyPath);
+//            NSAssert(![kRestrictedProperties[i] isEqualToString:keyPath], @"Property '%@' cannot be changed on a physics body or one of its parents after onEnter.",keyPath);
 
         }
     }

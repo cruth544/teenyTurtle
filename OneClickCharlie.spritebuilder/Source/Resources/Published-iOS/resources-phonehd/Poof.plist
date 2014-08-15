@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>Poof/Poof1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{721, 1}, {194, 1288}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {194, 1288}}</string>
+			<key>sourceSize</key>
+			<string>{196, 1288}</string>
+		</dict>
+		<key>Poof/Poof2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1829}, {218, 1310}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {218, 1310}}</string>
+			<key>sourceSize</key>
+			<string>{220, 1310}</string>
+		</dict>
+		<key>Poof/Poof3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{452, 1}, {267, 1376}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {267, 1376}}</string>
+			<key>sourceSize</key>
+			<string>{268, 1378}</string>
+		</dict>
+		<key>Poof/Poof4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{181, 1}, {269, 1384}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {269, 1384}}</string>
+			<key>sourceSize</key>
+			<string>{270, 1384}</string>
+		</dict>
+		<key>Poof/Poof5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1549}, {278, 1386}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {278, 1386}}</string>
+			<key>sourceSize</key>
+			<string>{280, 1386}</string>
+		</dict>
+		<key>Poof/Poof6.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {178, 1546}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {178, 1546}}</string>
+			<key>sourceSize</key>
+			<string>{180, 1546}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{2048, 2048}</string>
+		<key>textureFileName</key>
+		<string>Poof.png</string>
+	</dict>
+</dict>
+</plist>

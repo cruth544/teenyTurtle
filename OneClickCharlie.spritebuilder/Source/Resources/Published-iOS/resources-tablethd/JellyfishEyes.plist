@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>JellyfishEyes/eyes00.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3016, 1}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes01.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1057, 2414}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes02.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3016, 705}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes03.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {1003, 354}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 354}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 356}</string>
+		</dict>
+		<key>JellyfishEyes/eyes04.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{705, 2066}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes05.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2011, 353}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes06.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1409, 2414}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes07.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{353, 1061}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes08.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1006, 1}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes09.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3067, 1057}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes10.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 2066}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes11.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3067, 2113}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes12.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1057, 1057}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes13.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1006, 705}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes14.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1761, 1409}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes15.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{353, 2066}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes16.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2011, 1}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes17.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1057, 1409}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes18.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2011, 705}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes19.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3067, 1409}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes20.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2062, 1057}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes21.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 709}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes22.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1761, 2414}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes23.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{353, 3071}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes24.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1006, 353}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes25.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1057, 3419}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes26.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1061}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes27.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3067, 1761}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes28.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{705, 3071}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes29.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3016, 353}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes30.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2062, 3419}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes31.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{705, 1061}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes32.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 357}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes33.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1409, 1409}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes34.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 3071}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+		<key>JellyfishEyes/eyes35.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3067, 2465}, {1003, 350}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {1003, 350}}</string>
+			<key>sourceSize</key>
+			<string>{1004, 352}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{4096, 4096}</string>
+		<key>textureFileName</key>
+		<string>JellyfishEyes.png</string>
+	</dict>
+</dict>
+</plist>

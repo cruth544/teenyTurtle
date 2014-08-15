@@ -90,11 +90,44 @@
 			<key>isSmartSpriteSheet</key>
 			<true/>
 		</dict>
+		<key>BeachLevel</key>
+		<dict>
+			<key>isDirty</key>
+			<true/>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+		</dict>
+		<key>ClamArt</key>
+		<dict>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+		</dict>
+		<key>JellyfishArt</key>
+		<dict>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+		</dict>
+		<key>JellyfishEyes</key>
+		<dict>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+		</dict>
 		<key>Level Art</key>
 		<dict>
 			<key>isSmartSpriteSheet</key>
 			<true/>
 		</dict>
+		<key>Poof</key>
+		<dict>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+		</dict>
+		<key>SharkArt</key>
+		<dict/>
+		<key>SharkArtAccessories</key>
+		<dict/>
+		<key>SharkArtBody</key>
+		<dict/>
 		<key>Smaller PNGs</key>
 		<dict>
 			<key>isSmartSpriteSheet</key>
@@ -107,6 +140,11 @@
 		</dict>
 		<key>Sprites</key>
 		<dict/>
+		<key>Tentacles</key>
+		<dict>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+		</dict>
 		<key>Turtle</key>
 		<dict>
 			<key>isSmartSpriteSheet</key>
