@@ -16,6 +16,7 @@
 		8411E8E319805BBB00D7DD86 /* GamePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411E8DC19805BBB00D7DD86 /* GamePlayScene.m */; };
 		8411E8E419805BBB00D7DD86 /* ObstacleHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411E8DE19805BBB00D7DD86 /* ObstacleHolder.m */; };
 		8411E8E7198181D700D7DD86 /* Tutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411E8E6198181D700D7DD86 /* Tutorial.m */; };
+		84BAE25A199D9C1C00E818BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BAE259199D9C1C00E818BE /* Images.xcassets */; };
 		84C1244C1991544C0060D48C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C1244B1991544C0060D48C /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		84C1244E199154530060D48C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C1244D199154530060D48C /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		84C124501991545F0060D48C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C1244F1991545F0060D48C /* CFNetwork.framework */; };
@@ -168,6 +169,8 @@
 		8411E8E5198181D700D7DD86 /* Tutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tutorial.h; path = Source/Tutorial.h; sourceTree = "<group>"; };
 		8411E8E6198181D700D7DD86 /* Tutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tutorial.m; path = Source/Tutorial.m; sourceTree = "<group>"; };
 		84B77B2219997513006BCC20 /* GamePlaySceneProtected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePlaySceneProtected.h; path = Source/GamePlaySceneProtected.h; sourceTree = "<group>"; };
+		84B77B2819997840006BCC20 /* GamePlaySceneProtectedVar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GamePlaySceneProtectedVar.h; path = Source/GamePlaySceneProtectedVar.h; sourceTree = "<group>"; };
+		84BAE259199D9C1C00E818BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		84C1244B1991544C0060D48C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		84C1244D199154530060D48C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		84C1244F1991545F0060D48C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -470,6 +473,7 @@
 				8411E8DB19805BBB00D7DD86 /* GamePlayScene.h */,
 				8411E8DC19805BBB00D7DD86 /* GamePlayScene.m */,
 				84B77B2219997513006BCC20 /* GamePlaySceneProtected.h */,
+				84B77B2819997840006BCC20 /* GamePlaySceneProtectedVar.h */,
 				B737893D1807617C0076A88C /* AppDelegate.h */,
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 			);
@@ -561,6 +565,7 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				84BAE259199D9C1C00E818BE /* Images.xcassets */,
 				84D7CBE3198C151600301BB5 /* Sounds */,
 				B73789911807667A0076A88C /* Icons */,
 				B737893A180761570076A88C /* Published-iOS */,
@@ -707,6 +712,7 @@
 				84C124CD19915A7D0060D48C /* MGWUBackground-Landscape@2x~iphone.png in Resources */,
 				84C124E419915A7D0060D48C /* mgwuLogoDark.png in Resources */,
 				84C124CE19915A7D0060D48C /* MGWUBackground-Landscape~ipad.png in Resources */,
+				84BAE25A199D9C1C00E818BE /* Images.xcassets in Resources */,
 				84C124C519915A7D0060D48C /* MGWUAboutFooter-Landscape@2x~iphone.png in Resources */,
 				84C124B519915A7D0060D48C /* FBNoThanksButton.png in Resources */,
 				84C124BC19915A7D0060D48C /* hipmob.send.png in Resources */,
@@ -860,6 +866,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -897,6 +905,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

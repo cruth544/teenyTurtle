@@ -10,19 +10,54 @@
 
 @implementation TutorialLive
 {
-    CCPhysicsNode *physicsNode;
+    CCNode *_obstacleForTutorial;
 }
 
 - (void) didLoadFromCCB
 {
-    CCNode *level = [CCBReader load:@"Levels/LoopingLevel"];
-    [physicsNode addChild: level];
-    
+    runningTutorial = 3;
+    [self loadLargeTutorial];
 }
 
-- (void) onEnter
+- (void) loadLargeTutorial
 {
-    [super onEnter];
+    CCNode *largeTutorialLevel = [CCBReader load:@"Levels/TutorialLevel"];
+    [self.physicsNode addChild:largeTutorialLevel];
+    runningTutorial = 0;
 }
+
+- (void) loadTutorial
+{
+    for (int i = 0; i < 12; i++) {
+        CCNode *looper = [CCBReader load:@"Levels/LevelForTutorial"];
+        [self.levelsGroup addObject:looper];
+        [self.physicsNode addChild:looper];
+        looper.position = ccp(looper.contentSize.width * i, 0);
+        
+        if (i <= 5 || i == 7 || i == 10) {
+            CCNode *addGap = [CCBReader load:@"Gap"];
+            [_obstacleForTutorial addChild:addGap];
+            [addGap setPosition:ccp(0, 0)];
+        } else if (i == 6) {
+            CCNode *addFirstWall = [CCBReader load:@"Wall"];
+            [_obstacleForTutorial addChild:addFirstWall];
+            CCNode *swipeUpGesture = [CCBReader load:@"Live Tutorial/TutorialSwipeUp"];
+            swipeUpGesture.position = ccp(looper.contentSize.width * 5, 0);
+        } else if (i == 8) {
+            CCNode *addSecondWall = [CCBReader load:@"Wall"];
+            [_obstacleForTutorial addChild:addSecondWall];
+            [addSecondWall setPosition:ccp(0, 200)];
+            CCNode *swipeUpGesture = [CCBReader load:@"Live Tutorial/TutorialSwipeUp"];
+            swipeUpGesture.position = ccp(looper.contentSize.width * 5, 0);
+        } else if (i == 9) {
+            CCNode *addClam = [CCBReader load:@"Clam"];
+            [_obstacleForTutorial addChild:addClam];
+        } else if (i == 11) {
+            CCNode *wallForSharkAttack = [CCBReader load:@"Wall"];
+            [_obstacleForTutorial addChild:wallForSharkAttack];
+        }
+    }
+}
+
 
 @end

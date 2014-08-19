@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "GamePlaySceneProtected.h"
+#import "GamePlaySceneProtectedVar.h"
+//#import "GamePlayScene.h"
+//#import "ObstacleHolder.h"
 #import "Character.h"
-#import "ObstacleHolder.h"
 #import "GameOver.h"
 #import "Shark.h"
 #import "Starfish.h"
 #import "NSUserDefaults+Encryption.h"
-
 
 
 static BOOL hasGameBeenPlayed;
@@ -21,7 +21,7 @@ static BOOL hasGameBeenPlayed;
 
 @implementation GamePlayScene
 {
-    CCPhysicsNode *_physicsNode;
+//    CCPhysicsNode *_physicsNode;
 
     Character *_characterNode;
     Shark *_sharkNode;
@@ -38,6 +38,7 @@ static BOOL hasGameBeenPlayed;
     
     int _distanceNumber;
     CCLabelTTF *_score;
+    NSNumber *_highScore;
     
     CCNodeColor *_oxygenMeter;
     
@@ -45,13 +46,23 @@ static BOOL hasGameBeenPlayed;
     
     GameOver *gameOverVar;
     
+<<<<<<< HEAD
     NSMutableArray *_levelsGroup;
 //    CCNode *_obstacles;
     ObstacleHolder *obstacleHolderClassVar;
     CCNode *_obstacleForTutorial;
+=======
+    CCNode *_obstacles;
+//    NSMutableArray *_levelsGroup;
+    
+//TODO: finish Tutorial
+    BOOL _finishedTutorial;
+    
+    CCNodeColor *_overTurtle;
+>>>>>>> detachedThing
 }
 
-- (instancetype)init
+- (instancetype) init
 {
     self = [super init];
     if (self) {
@@ -69,7 +80,9 @@ static BOOL hasGameBeenPlayed;
 {
     //enabling userinteraction
     self.userInteractionEnabled = YES;
+//    self.physicsNode.debugDraw = YES;
     
+<<<<<<< HEAD
     if (runningTutorial) {
         [self loadTutorial];
     } else {
@@ -81,6 +94,21 @@ static BOOL hasGameBeenPlayed;
         [self loadTurtle];
 //        [self loadShark];
 //            _sharkNode.visible = NO;
+=======
+    if (runningTutorial == 0) {
+        
+        //adding level to gamePlayScene Node
+        CCNode *level = [CCBReader load:@"Levels/Beach" owner:self];
+        [_physicsNode addChild:level];
+        
+        [self loadTurtle];
+        [_characterNode setPosition:ccp(50, 335)];
+        [_overTurtle setZOrder:1000];
+        
+        [self loadShark];
+        [_sharkNode setPosition:ccp(600, -100)];
+        _sharkNode.visible = NO;
+>>>>>>> detachedThing
         
         self.paused = YES;
         
@@ -90,9 +118,31 @@ static BOOL hasGameBeenPlayed;
         } else {
             self.paused = NO;
             _characterNode.paused = NO;
+<<<<<<< HEAD
         }
         
         [self loadLevel];
+=======
+        }
+        
+        [_physicsNode setPosition:ccp(0, -160)];
+        
+        for (int i = 0; i < 5; i++) {
+            ObstacleHolder *looper = (ObstacleHolder *)[CCBReader load:@"Levels/LoopingLevel"];
+            [_levelsGroup addObject:looper];
+            [_physicsNode addChild:looper];
+            
+            if (i == 0) {
+                looper.position = ccp(648 + 144, 0);
+            } else {
+                looper.position = ccp(looper.contentSize.width * i + 648 + 144, 0);
+            }
+        }
+
+    } else  if (runningTutorial == 1){
+        CCNode *tutorialLevel = [CCBReader load:@"Levels/LoopingLevelForTutorial"];
+        [_physicsNode addChild:tutorialLevel];
+>>>>>>> detachedThing
     }
     
     _physicsNode.collisionDelegate = self;
@@ -122,7 +172,7 @@ static BOOL hasGameBeenPlayed;
     CCActionFollow *follow = [CCActionFollow actionWithTarget:_characterNode worldBoundary:CGRectMake(0.f, 0.f, CGFLOAT_MAX, width)];
     [_physicsNode runAction:follow];
     
-    [[NSUserDefaults standardUserDefaults] setEncryptionKey:@"myencryptionkey!"];
+//    [[NSUserDefaults standardUserDefaults] setEncryptionKey:@"EB4ZTSTnHS8726Y8"];
 }
 
 
@@ -243,8 +293,24 @@ static BOOL hasGameBeenPlayed;
 - (void) startGame
 {
     [_mainMenu removeFromParent];
-    
     [self unpauseEverything];
+}
+
+- (void) loadShark
+{
+    _sharkNode = (Shark *)[CCBReader load:@"Shark"];
+    _sharkNode.turtleTarget = _characterNode;
+    [_physicsNode addChild:_sharkNode z:100];
+    _sharkNode.physicsBody.collisionType = @"shark";
+}
+
+- (void) loadTurtle
+{
+    _characterNode = (Character *)[CCBReader load:@"Turtle"];
+    [_physicsNode addChild:_characterNode z:99];
+    _characterNode.physicsBody.collisionType = @"character";
+    [_overTurtle removeFromParentAndCleanup:NO] ;
+    [_physicsNode addChild:_overTurtle z:1000];
 }
 
 - (void) unpauseEverything
@@ -263,6 +329,7 @@ static BOOL hasGameBeenPlayed;
 }
 
 #pragma mark Tutorial
+<<<<<<< HEAD
 
 - (void) startTutorial
 {
@@ -305,6 +372,13 @@ static BOOL hasGameBeenPlayed;
             [_obstacleForTutorial addChild:wallForSharkAttack];
         }
     }
+=======
+- (void) startTutorial
+{
+    runningTutorial = 1;
+    CCScene *reloadGamePlayScene = [CCBReader loadAsScene:@"GamePlayScene"];
+    [[CCDirector sharedDirector] replaceScene:reloadGamePlayScene];
+>>>>>>> detachedThing
 }
 
 #pragma mark Levels
@@ -333,10 +407,14 @@ static BOOL hasGameBeenPlayed;
     self.paused = YES;
     hasGameBeenPlayed = YES;
 
-    _numberOfStarfish = [[NSUserDefaults standardUserDefaults] objectEncryptedForKey:@"EB4ZTSTnHS8726Y8"];
-    _numberOfStarfish = [NSNumber numberWithInt:[_numberOfStarfish intValue] + _starfishCollectedThisGame];
+    _highScore = [[NSUserDefaults standardUserDefaults] objectEncryptedForKey:@"EB4ZTSTnHS8726Y8"];
+    if ([NSNumber numberWithInt:_distanceNumber] > _highScore) {
+        _highScore = [NSNumber numberWithInt:_distanceNumber];
+    }
     
-    [[NSUserDefaults standardUserDefaults] setObjectEncrypted:_numberOfStarfish forKey:@"EB4ZTSTnHS8726Y8"];
+    _highScore = [NSNumber numberWithInt:_distanceNumber];
+    
+    [[NSUserDefaults standardUserDefaults] setObjectEncrypted:_highScore forKey:@"EB4ZTSTnHS8726Y8"];
 
     GameOver *popup = (GameOver *)[CCBReader load:@"GameOver" owner:self];
     popup.distanceForGameOverMessage = _distanceNumber;
@@ -393,6 +471,7 @@ static BOOL hasGameBeenPlayed;
         
     } else {
     
+<<<<<<< HEAD
         [self loopLevel];
 
         if (_characterNode.position.y > 275 && _characterNode.position.x > 600) {
@@ -440,6 +519,21 @@ static BOOL hasGameBeenPlayed;
         
         if (CGRectGetMinY(_characterNode.boundingBox) < CGRectGetMinY(_physicsNode.boundingBox)) {
             [self gameOverPopup];
+=======
+    if (_characterNode.position.y > 275 && _characterNode.position.x > 600) {
+        if (_characterNode.characterSpeed > 30.f) {
+            _characterNode.characterSpeed -= 1.f;
+        } else {
+            _characterNode.characterSpeed = 30.f;
+            _characterNode.didCollide = false;
+        }
+    } else if (_characterNode.position.y > 50 && _characterNode.position.y < 275) {
+        if (_characterNode.characterSpeed > 75) {
+            _characterNode.characterSpeed -= 1.f;
+        } else {
+            _characterNode.characterSpeed = 70.f;
+            _characterNode.didCollide = false;
+>>>>>>> detachedThing
         }
     }
 }

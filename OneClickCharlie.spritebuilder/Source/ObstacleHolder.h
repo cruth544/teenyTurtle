@@ -8,11 +8,9 @@
 
 #import "GamePlayScene.h"
 
-@interface ObstacleHolder : GamePlayScene
+@interface ObstacleHolder : CCNode
 
 @property (nonatomic, strong) CCNode *obstacles;
-@property (nonatomic, assign) BOOL tutorialIsRunning;
-
 
 - (void) reinitialize;
 

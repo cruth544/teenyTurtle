@@ -18,12 +18,11 @@ static float characterPosition;
     BOOL _teleportCD;
 }
 
-
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _characterSpeed = 100.f;
+        _characterSpeed = 95.f;
         _waterBuoyancy = CGPointMake(0, 2000);
     }
     return self;
@@ -70,7 +69,7 @@ playerUpdateVelocity(cpBody *body, cpVect gravity, cpFloat damping, cpFloat dt)
     
     if (selfRef.didCollide == false) {
         if (body->v.x <= selfRef.characterSpeed) {
-            float increasingVelocity = body->v.x + 1.5f;
+            float increasingVelocity = body->v.x + 3.f;
             body->v.x = increasingVelocity;
         } else {
             body->v.x = selfRef.characterSpeed;

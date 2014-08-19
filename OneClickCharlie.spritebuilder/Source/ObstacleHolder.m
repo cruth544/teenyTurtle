@@ -38,41 +38,29 @@
     [Character characterPosition];
     [_obstacles removeAllChildrenWithCleanup:YES];
     _randomizer = arc4random()%10;
-    if (_randomizer <= 3) {
-        if (arc4random()%2 == 0) {
-            obstaclePosition = [Character characterPosition] + arc4random()%25;
-        } else {
-            obstaclePosition = [Character characterPosition] - arc4random()%25;
-        }
+    if (_randomizer <= 6) {
+        obstaclePosition = arc4random()%200 + 80;
         
         CCNode *addGap = [CCBReader load:@"Gap"];
-        [_obstacles addChild:addGap z:10];
+        [_obstacles addChild:addGap z:25];
         
-        CCNode *wallObstacle = [CCBReader load:@"Wall"];
+        CCNode *wallObstacle = [CCBReader load:@"Jellyfish"];
         [_obstacles addChild:wallObstacle z:1];
         
-        float rotationAmount = arc4random()%24 + arc4random()%100 / 100;
-        CCLOG(@"Rotation Amount: %f", rotationAmount);
-        wallObstacle.physicsBody.collisionType = @"wall";
+//        wallObstacle.physicsBody.collisionType = @"wall";
         [addGap setPosition:ccp(0, 0)];
         [wallObstacle setPosition:ccp(0, obstaclePosition)];
-        [wallObstacle setRotation:rotationAmount];
         
-    } else if (_randomizer == 4) {
+    } else if (_randomizer >= 8) {
         CCNode *addGap = [CCBReader load:@"Gap"];
         [_obstacles addChild:addGap];
         
         CCNode *clam = [CCBReader load:@"Clam"];
-        [_obstacles addChild:clam];
+        [_obstacles addChild:clam z:200];
+        [clam setPosition:ccp(0, 0)];
         
         clam.physicsBody.collisionType = @"clam";
         [clam setPosition:ccp(0, 18)];
-        
-    } else if (_randomizer >= 9) {
-        CCNode *starfish = [CCBReader load:@"Levels/starGroup1"];
-            [_obstacles addChild:starfish z:99];
-            float yPosition = arc4random() % 250;
-            [starfish setPosition:ccp(0, yPosition + 30)];
     }
 }
 

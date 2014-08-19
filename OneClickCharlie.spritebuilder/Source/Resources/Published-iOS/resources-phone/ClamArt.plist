@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>ClamArt/ClamBottom.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 373}, {337, 121}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 1}, {337, 121}}</string>
+			<key>sourceSize</key>
+			<string>{337, 122}</string>
+		</dict>
+		<key>ClamArt/ClamTop.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {205, 370}}</string>
+			<key>offset</key>
+			<string>{0, -1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 1}, {205, 370}}</string>
+			<key>sourceSize</key>
+			<string>{206, 371}</string>
+		</dict>
+		<key>ClamArt/EyeDot.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 496}, {9, 9}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {9, 9}}</string>
+			<key>sourceSize</key>
+			<string>{9, 9}</string>
+		</dict>
+		<key>ClamArt/EyeOutline.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{445, 1}, {42, 52}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {42, 52}}</string>
+			<key>sourceSize</key>
+			<string>{42, 52}</string>
+		</dict>
+		<key>ClamArt/Pearl.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{340, 41}, {50, 50}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {50, 50}}</string>
+			<key>sourceSize</key>
+			<string>{50, 50}</string>
+		</dict>
+		<key>ClamArt/Tongue.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{208, 1}, {235, 38}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {235, 38}}</string>
+			<key>sourceSize</key>
+			<string>{235, 38}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{512, 512}</string>
+		<key>textureFileName</key>
+		<string>ClamArt.png</string>
+	</dict>
+</dict>
+</plist>
